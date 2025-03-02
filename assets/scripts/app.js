@@ -168,13 +168,13 @@ const counters = [
         "description": "Voor vragen over je loopbaan of voor een gesprek over je werk met een coach.",
         "calendar": [
             {
-                "day": "wednesday",
+                "day": "monday",
                 "start": "13:00",
                 "end": "15:00",
                 "repeat": "odd_weeks"
             }
         ],
-        "calendar_summary": "Oneven weken op woensdag van 13:00 tot 15:00 uur."
+        "calendar_summary": "Oneven weken op maandag van 13:00 tot 15:00 uur."
     },
     {
         "name": "Vrijwilligers informatiepunt",
@@ -226,6 +226,15 @@ const counters = [
 
 const nextCounterInterval = 1000 * 10; // 10s
 const updateItineraryInterval = 1000 * 60 * 60 * 8; // 8h
+const dayToWeekday = {
+    "monday": 1,
+    "tuesday": 2,
+    "wednesday": 3,
+    "thursday": 4,
+    "friday": 5
+}
+
+moment.locale("nl");
 
 function nextCounter(counterIdx) {
     setCounterShowcase(counters[counterIdx]);
@@ -266,6 +275,18 @@ function getCountersPlannedForTimeOfDay(applicableCounters, day, timeOfDayCheck)
         .join(", ");
 }
 
+function isNthWeekdayOfMonth(weekday, n) {
+    const firstDayOfMonth = moment().startOf("month");
+    const diff = weekday - firstDayOfMonth.isoWeekday();
+    const daysToFirstWeekday = diff < 0 ? 7 + diff : diff;
+
+    const nthWeekdayOfMonth = firstDayOfMonth.add(daysToFirstWeekday, "days");
+    nthWeekdayOfMonth.add(n - 1, "week");
+
+    return moment().isSame(nthWeekdayOfMonth, 'week');
+
+}
+
 function updateItinerary() {
     const mondayMorning = document.querySelector('[data-itinerary-monday-morning]');
     const mondayAfternoon = document.querySelector('[data-itinerary-monday-afternoon]');
@@ -282,7 +303,9 @@ function updateItinerary() {
         const applicableCalendars = counter.calendar.filter(calendar =>
             calendar.repeat === "always" ||
                 (calendar.repeat === "even_weeks" && !isOddWeek) ||
-                (calendar.repeat === "odd_weeks" && isOddWeek)
+                (calendar.repeat === "odd_weeks" && isOddWeek) ||
+                (calendar.repeat === "first_of_month" && isNthWeekdayOfMonth(dayToWeekday[calendar.day], 1)) ||
+                (calendar.repeat === "third_of_month" && isNthWeekdayOfMonth(dayToWeekday[calendar.day], 3))
         );
 
         return {
@@ -290,8 +313,6 @@ function updateItinerary() {
             calendar: applicableCalendars,
         };
     });
-
-    console.log(applicableCounters);
 
     mondayMorning.textContent = getCountersPlannedForTimeOfDay(applicableCounters, "monday", checkIsMorning);
     mondayAfternoon.textContent = getCountersPlannedForTimeOfDay(applicableCounters, "monday", checkIsAfternoon);
