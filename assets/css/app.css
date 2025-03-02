@@ -2,6 +2,7 @@
 
 :root {
     --primary-color: #DF6C1B;
+    --secondary-color: #FEECDE;
     --tertiary-color: #FEF7F2;
 }
 
@@ -22,17 +23,21 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 600;
     color: var(--primary-color);
 }
 
-p {
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
     font-size: 1.2rem;
 }
 
-.w-100 {
-    width: 100%;
+p {
+    font-size: 1.1rem;
 }
 
 .container {
@@ -44,37 +49,70 @@ p {
     align-items: stretch;
 }
 
-.orange-column-border {
+.hero-image {
+    background-image: url("../images/vanberesteyn.webp");
+    background-size: cover;
+    background-position: center;
     border: solid var(--primary-color);
-}
-
-.orange-column-border--tl {
     border-width: 1rem 0 0 1rem;
+    position: relative;
 }
 
-.orange-column-border--l {
+.hero-text {
+    position: absolute;
+    left: 0;
+    bottom: 1rem;
+    background-color: var(--primary-color);
+    padding: 1rem 1rem 1rem 2.4rem;
+}
+
+.hero-text h1 {
+    color: white;
+}
+
+.hero-text h3 {
+    color: var(--tertiary-color)
+}
+
+.counter {
+    padding: 2rem 0 0 2rem;
+    border: solid var(--primary-color);
     border-width: 0 0 0 1rem;
 }
 
-.header-with-border {
+.counter-name {
+    display: inline-block;
     border: 1px solid black;
-    position: absolute;
-    left: 0; bottom: 1rem;
 }
 
-.logo {
-    margin: 1rem 1rem 0 0;
-    max-width: 25vw;
-    max-height: 25vh;
+.counter-logo {
+    max-width: 100%;
+    max-height: 20vh;
+}
+
+.itinerary {
+    padding: 1rem 0 0 1rem;
+}
+
+.itinerary .odd, .itinerary .even {
+    padding: .5rem !important;
+}
+
+.itinerary .odd {
+    background-color: white;
+}
+
+.itinerary .even {
+    background-color: var(--secondary-color);
+}
+
+.itinerary h3, .itinerary p {
+    margin: 0;
 }
 
 @media screen and (max-width: 600px) {
     .semi-height {
         min-height: auto;
         align-items: stretch;
-    }
-
-    .header-with-border {
-        position: relative;
     }
 }

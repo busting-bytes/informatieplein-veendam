@@ -157,7 +157,7 @@ const counters = [
                 "repeat": "odd_weeks"
             }
         ],
-        "calendar_text": "Even weken op maandag van 14:00 tot 16:00 uur, oneven weken op woensdag van 10:00 tot 12:00 uur."
+        "calendar_summary": "Even weken op maandag van 14:00 tot 16:00 uur, oneven weken op woensdag van 10:00 tot 12:00 uur."
     },
     {
         "name": "Inloopspreekuur FNV",
@@ -188,13 +188,13 @@ const counters = [
                 "day": "monday",
                 "start": "14:00",
                 "end": "16:00",
-                "repeat": "first_week"
+                "repeat": "first_of_month"
             },
             {
                 "day": "monday",
                 "start": "14:00",
                 "end": "16:00",
-                "repeat": "third_week"
+                "repeat": "third_of_month"
             }
         ],
         "calendar_summary": "Iedere eerste en derde maandag van de maand van 13:00 tot 15:00 uur."
@@ -211,29 +211,30 @@ const counters = [
                 "day": "monday",
                 "start": "14:00",
                 "end": "16:00",
-                "repeat": "first_week"
+                "repeat": "first_of_month"
             },
             {
                 "day": "monday",
                 "start": "14:00",
                 "end": "16:00",
-                "repeat": "third_week"
+                "repeat": "third_of_month"
             }
         ],
         "calendar_summary": "Iedere eerste en derde maandag van de maand van 13:00 tot 15:00 uur."
     }
 ]
 
-const counterDisplayDuration = 10000;
+const nextCounterInterval = 1000 * 10; // 10s
+const updateItineraryInterval = 1000 * 60 * 60 * 8; // 8h
 
 function nextCounter(counterIdx) {
-    populateDOMWithCounterData(counters[counterIdx]);
+    setCounterShowcase(counters[counterIdx]);
 
     counterIdx++;
     return (counterIdx >= counters.length) ? 0 : counterIdx;
 }
 
-function populateDOMWithCounterData(counter) {
+function setCounterShowcase(counter) {
     const counterName = document.querySelector('[data-counter-name]');
     const counterLogo = document.querySelector('[data-counter-logo]');
     const counterDescription = document.querySelector('[data-counter-description]');
@@ -246,12 +247,70 @@ function populateDOMWithCounterData(counter) {
     counterCalendarSummary.textContent = counter.calendar_summary;
 }
 
+function checkIsMorning(time) {
+    return moment(time + ":00", "HH:mm:ss").isBefore(moment("12:00:00", "HH:mm"));
+}
+
+function checkIsAfternoon(time) {
+    return moment(time + ":00", "HH:mm:ss").isSameOrAfter(moment("12:00:00", "HH:mm"));
+}
+
+function getCountersPlannedForTimeOfDay(applicableCounters, day, timeOfDayCheck) {
+    return applicableCounters
+        .map(counter => {
+            return counter.calendar.find(calendar => calendar.day === day && timeOfDayCheck(calendar.start))
+                ? counter.name
+                : false;
+        })
+        .filter(counterName => counterName !== false)
+        .join(", ");
+}
+
+function updateItinerary() {
+    const mondayMorning = document.querySelector('[data-itinerary-monday-morning]');
+    const mondayAfternoon = document.querySelector('[data-itinerary-monday-afternoon]');
+    const tuesdayMorning = document.querySelector('[data-itinerary-tuesday-morning]');
+    const tuesdayAfternoon = document.querySelector('[data-itinerary-tuesday-afternoon]');
+    const wednesdayMorning = document.querySelector('[data-itinerary-wednesday-morning]');
+    const wednesdayAfternoon = document.querySelector('[data-itinerary-wednesday-afternoon]');
+    const thursdayMorning = document.querySelector('[data-itinerary-thursday-morning]');
+    const thursdayAfternoon = document.querySelector('[data-itinerary-thursday-afternoon]');
+    const weekNumber = moment().week();
+    const isOddWeek = weekNumber % 2 !== 0;
+
+    const applicableCounters = counters.map(counter => {
+        const applicableCalendars = counter.calendar.filter(calendar =>
+            calendar.repeat === "always" ||
+                (calendar.repeat === "even_weeks" && !isOddWeek) ||
+                (calendar.repeat === "odd_weeks" && isOddWeek)
+        );
+
+        return {
+            name: counter.name,
+            calendar: applicableCalendars,
+        };
+    });
+
+    console.log(applicableCounters);
+
+    mondayMorning.textContent = getCountersPlannedForTimeOfDay(applicableCounters, "monday", checkIsMorning);
+    mondayAfternoon.textContent = getCountersPlannedForTimeOfDay(applicableCounters, "monday", checkIsAfternoon);
+    tuesdayMorning.textContent = getCountersPlannedForTimeOfDay(applicableCounters, "tuesday", checkIsMorning);
+    tuesdayAfternoon.textContent = getCountersPlannedForTimeOfDay(applicableCounters, "tuesday", checkIsAfternoon);
+    wednesdayMorning.textContent = getCountersPlannedForTimeOfDay(applicableCounters, "wednesday", checkIsMorning);
+    wednesdayAfternoon.textContent = getCountersPlannedForTimeOfDay(applicableCounters, "wednesday", checkIsAfternoon);
+    thursdayMorning.textContent = getCountersPlannedForTimeOfDay(applicableCounters, "thursday", checkIsMorning);
+    thursdayAfternoon.textContent = getCountersPlannedForTimeOfDay(applicableCounters, "thursday", checkIsAfternoon);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
-    let counterIdx = 0;
+    let counterIdx = 8;
 
     counterIdx = nextCounter(counterIdx);
-
     setInterval(() => {
         counterIdx = nextCounter(counterIdx);
-    }, counterDisplayDuration);
+    }, nextCounterInterval);
+
+    updateItinerary();
+    setInterval(() => updateItinerary, updateItineraryInterval);
 });

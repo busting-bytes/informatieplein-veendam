@@ -10,14 +10,11 @@
     <base href="https://busting-bytes.github.io/informatieplein-veendam/">
 
     <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/site.webmanifest">
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://busting-bytes.github.io/informatieplein-veendam/">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
 
     <!-- Robots Meta Tag -->
     <meta name="robots" content="index, follow">
@@ -35,36 +32,82 @@
         <div class="columns">
             <div class="column col-6 col-sm-12">
                 <!-- Top Left -->
-                <div class="semi-height orange-column-border orange-column-border--tl">
-                    <div class="columns col-gapless">
-                        <div class="column col-10">
-                            <img src="assets/images/vanberesteyn.webp" alt="vanBerensteyn" class="w-100">
-                        </div>
+                <div class="semi-height hero-image">
+                    <div class="hero-text">
+                        <h1>Informatieplein</h1>
+                        <h3 class="mb-1">U bent welkom met al uw vragen.</h3>
                     </div>
                 </div>
                 <!-- Bottom Left -->
-                <div class="semi-height orange-column-border orange-column-border--l">
-                    <div class="pl-2">
-                        <h1>Informatieplein</h1>
-                        <h3>U bent welkom met al uw vragen.</h3>
+                <div class="semi-height counter">
+                    <div class="columns">
+                        <div class="column col-12 pb-2">
+                            <div class="p-2 counter-name">
+                                <h2 class="m-0" data-counter-name></h2>
+                            </div>
+                        </div>
+                        <div class="column col-8">
+                            <p data-counter-description></p>
+                            <p data-counter-calendar-summary></p>
+                        </div>
+                        <div class="column col-4">
+                            <img src="assets/images/logo_bibliotheekveendam.png" alt="Bibliotheek Veendam" class="counter-logo" data-counter-logo>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="column col-6 col-sm-12">
-                <!-- Top Right -->
-                <div class="semi-height p-relative">
-                    <div class="text-right">
-                        <img src="assets/images/logo_bibliotheekveendam.png" alt="Bibliotheek Veendam" class="logo" data-counter-logo>
-                    </div>
-                    <div class="p-2 header-with-border">
-                        <h2 class="m-0" data-counter-name></h2>
-                    </div>
-                </div>
-                <!-- Bottom Right -->
-                <div class="columns semi-height">
-                    <div class="column col-8 col-sm-12">
-                        <p data-counter-description></p>
-                        <p data-counter-calendar-summary></p>
+            <div class="column col-6 col-sm-12 ">
+                <div class="itinerary">
+                    <h2>Weekagenda</h2>
+                    <div class="columns col-gapless">
+                        <div class="column col-5 odd">
+                            <h3>Maandagochtend</h3>
+                        </div>
+                        <div class="column col-7 odd">
+                            <p data-itinerary-monday-morning></p>
+                        </div>
+                        <div class="column col-5 even">
+                            <h3>Maandagmiddag</h3>
+                        </div>
+                        <div class="column col-7 even">
+                            <p data-itinerary-monday-afternoon></p>
+                        </div>
+                        <div class="column col-5 odd">
+                            <h3>Dinsdagochtend</h3>
+                        </div>
+                        <div class="column col-7 odd">
+                            <p data-itinerary-tuesday-morning></p>
+                        </div>
+                        <div class="column col-5 even">
+                            <h3>Dinsdagmiddag</h3>
+                        </div>
+                        <div class="column col-7 even">
+                            <p data-itinerary-tuesday-afternoon></p>
+                        </div>
+                        <div class="column col-5 odd">
+                            <h3>Woensdagochtend</h3>
+                        </div>
+                        <div class="column col-7 odd">
+                            <p data-itinerary-wednesday-morning></p>
+                        </div>
+                        <div class="column col-5 even">
+                            <h3>Woensdagmiddag</h3>
+                        </div>
+                        <div class="column col-7 even">
+                            <p data-itinerary-wednesday-afternoon></p>
+                        </div>
+                        <div class="column col-5 odd">
+                            <h3>Donderdagochtend</h3>
+                        </div>
+                        <div class="column col-7 odd">
+                            <p data-itinerary-thursday-morning></p>
+                        </div>
+                        <div class="column col-5 even">
+                            <h3>Donderdagmiddag</h3>
+                        </div>
+                        <div class="column col-7 even">
+                            <p data-itinerary-thursday-afternoon></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -72,6 +115,7 @@
     </div>
 </main>
 <!-- JavaScript -->
+<script src="//momentjs.com/downloads/moment-with-locales.js" defer></script>
 <script src="assets/scripts/app.js" defer></script>
 </body>
 </html>
