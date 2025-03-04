@@ -120,7 +120,7 @@ const counters = [
         "calendar_summary": "Op maandagen van 14:00 tot 15:00 uur."
     },
     {
-        "name": "Hulp bij woningzaken",
+        "name": "Vanaf 17 maart: Hulp bij woningzaken",
         "logo": {
             "filename": "logo_acantus.png",
             "alt": "Acantus"
@@ -137,12 +137,12 @@ const counters = [
         "calendar_summary": "Op maandagen van 14:00 tot 16:00 uur."
     },
     {
-        "name": "Hulp bij geldzaken en formulieren",
+        "name": "Maatje voor hulp bij geldzaken",
         "logo": {
             "filename": "logo_schuldhm.png",
             "alt": "SchuldHulpMaatje"
         },
-        "description": "Voor vragen over geld, subsidies, uitkeringen, formulieren overheid en meer.",
+        "description": "Voor vragen over hulp en/of een maatje bij geldzaken.",
         "calendar": [
             {
                 "day": "monday",
