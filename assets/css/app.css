@@ -7,7 +7,7 @@
 }
 
 html {
-    font-size: clamp(14px, 1.5vw, 28px);
+    font-size: clamp(14px, 1.5vw, 20px);
     height: 100%;
     margin: 0;
 }
@@ -23,21 +23,21 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 600;
     color: var(--primary-color);
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 p {
-    font-size: 1.1rem;
+    font-size: .9rem;
 }
 
 .container {
@@ -61,16 +61,17 @@ p {
 .hero-text {
     position: absolute;
     left: 0;
-    bottom: 1rem;
+    top: 0;
     background-color: var(--primary-color);
-    padding: 1rem 1rem 1rem 2.4rem;
+    padding: .6rem 1.2rem .6rem 1.8rem;
 }
 
 .hero-text h1 {
     color: white;
+    margin-bottom: .3rem;
 }
 
-.hero-text h3 {
+.hero-text p {
     color: var(--tertiary-color)
 }
 
@@ -106,9 +107,8 @@ p {
     background-color: var(--secondary-color);
 }
 
-.itinerary h3, .itinerary p {
+.itinerary p {
     margin: 0;
-    font-size: 1rem;
 }
 
 @media screen and (max-width: 600px) {

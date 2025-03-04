@@ -236,6 +236,12 @@ const dayToWeekday = {
 
 moment.locale("nl");
 
+function setItineraryDateRange() {
+    const itineraryDateRange = document.querySelector('[data-itinerary-date-range]');
+    const startOfWeek = moment().startOf("week");
+    itineraryDateRange.textContent = startOfWeek.format("D MMMM") + " t/m " + startOfWeek.add(3, "days").format("D MMMM");
+}
+
 function nextCounter(counterIdx) {
     setCounterShowcase(counters[counterIdx]);
 
@@ -325,6 +331,9 @@ function updateItinerary() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+
+    setItineraryDateRange();
+
     let counterIdx = 8;
 
     counterIdx = nextCounter(counterIdx);
