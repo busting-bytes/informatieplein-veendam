@@ -1,5 +1,12 @@
-
-const counters = [
+/**
+ * Frequency options:
+ * - "weekly": every week
+ * - "even_weeks": every even week
+ * - "odd_weeks": every odd week
+ * - "*_of_month": every (first | second | third | fourth | last) weekday of the month, where the weekday is specified in the "day" property
+ * - "once": once on a specified date taken from the "day" property
+ */
+const participants = [
     {
         "name": "Hulp bij geldzaken en formulieren",
         "logo": {
@@ -12,7 +19,7 @@ const counters = [
                 "day": "monday",
                 "start": "14:00",
                 "end": "16:00",
-                "repeat": "always"
+                "frequency": "weekly"
             }
         ],
         "calendar_summary": "Op maandagen van 14:00 tot 16:00 uur."
@@ -29,7 +36,7 @@ const counters = [
                 "day": "monday",
                 "start": "13:00",
                 "end": "14:30",
-                "repeat": "always"
+                "frequency": "weekly"
             }
         ],
         "calendar_summary": "Op maandagen van 13:00 tot 14.30 uur."
@@ -46,7 +53,7 @@ const counters = [
                 "day": "monday",
                 "start": "14:00",
                 "end": "16:00",
-                "repeat": "always"
+                "frequency": "weekly"
             }
         ],
         "calendar_summary": "Op maandagen van 14:00 tot 16:00 uur."
@@ -63,7 +70,7 @@ const counters = [
                 "day": "monday",
                 "start": "14:00",
                 "end": "16:00",
-                "repeat": "always"
+                "frequency": "weekly"
             }
         ],
         "calendar_summary": "Op maandagen van 14:00 tot 16:00 uur."
@@ -80,7 +87,7 @@ const counters = [
                 "day": "wednesday",
                 "start": "10:00",
                 "end": "12:00",
-                "repeat": "always"
+                "frequency": "weekly"
             }
         ],
         "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur."
@@ -97,7 +104,7 @@ const counters = [
                 "day": "wednesday",
                 "start": "10:00",
                 "end": "12:00",
-                "repeat": "always"
+                "frequency": "weekly"
             }
         ],
         "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur."
@@ -114,7 +121,7 @@ const counters = [
                 "day": "monday",
                 "start": "14:00",
                 "end": "15:00",
-                "repeat": "always"
+                "frequency": "weekly"
             }
         ],
         "calendar_summary": "Op maandagen van 14:00 tot 15:00 uur."
@@ -131,7 +138,7 @@ const counters = [
                 "day": "monday",
                 "start": "14:00",
                 "end": "16:00",
-                "repeat": "always"
+                "frequency": "weekly"
             }
         ],
         "calendar_summary": "Op maandagen van 14:00 tot 16:00 uur."
@@ -148,13 +155,13 @@ const counters = [
                 "day": "monday",
                 "start": "14:00",
                 "end": "16:00",
-                "repeat": "even_weeks"
+                "frequency": "even_weeks"
             },
             {
                 "day": "wednesday",
                 "start": "10:00",
                 "end": "12:00",
-                "repeat": "odd_weeks"
+                "frequency": "odd_weeks"
             }
         ],
         "calendar_summary": "Even weken op maandag van 14:00 tot 16:00 uur, oneven weken op woensdag van 10:00 tot 12:00 uur."
@@ -171,7 +178,7 @@ const counters = [
                 "day": "monday",
                 "start": "13:00",
                 "end": "15:00",
-                "repeat": "odd_weeks"
+                "frequency": "odd_weeks"
             }
         ],
         "calendar_summary": "Oneven weken op maandag van 13:00 tot 15:00 uur."
@@ -188,13 +195,13 @@ const counters = [
                 "day": "monday",
                 "start": "14:00",
                 "end": "16:00",
-                "repeat": "first_of_month"
+                "frequency": "first_of_month"
             },
             {
                 "day": "monday",
                 "start": "14:00",
                 "end": "16:00",
-                "repeat": "third_of_month"
+                "frequency": "third_of_month"
             }
         ],
         "calendar_summary": "Iedere eerste en derde maandag van de maand van 13:00 tot 15:00 uur."
@@ -211,20 +218,20 @@ const counters = [
                 "day": "monday",
                 "start": "14:00",
                 "end": "16:00",
-                "repeat": "first_of_month"
+                "frequency": "first_of_month"
             },
             {
                 "day": "monday",
                 "start": "14:00",
                 "end": "16:00",
-                "repeat": "third_of_month"
+                "frequency": "third_of_month"
             }
         ],
         "calendar_summary": "Iedere eerste en derde maandag van de maand van 13:00 tot 15:00 uur."
     }
 ]
 
-const nextCounterInterval = 1000 * 10; // 10s
+const highlightNextParticipantInterval = 1000 * 10; // 10s
 const updateItineraryInterval = 1000 * 60 * 60 * 8; // 8h
 const dayToWeekday = {
     "monday": 1,
@@ -239,45 +246,58 @@ moment.locale("nl");
 function setItineraryDateRange() {
     const itineraryDateRange = document.querySelector('[data-itinerary-date-range]');
     const startOfWeek = moment().startOf("week");
+
     itineraryDateRange.textContent = startOfWeek.format("D MMMM") + " t/m " + startOfWeek.add(3, "days").format("D MMMM");
 }
 
-function nextCounter(counterIdx) {
-    setCounterShowcase(counters[counterIdx]);
+function highlightNextParticipant(participantIdx) {
+    setHighlightedParticipant(participants[participantIdx]);
 
-    counterIdx++;
-    return (counterIdx >= counters.length) ? 0 : counterIdx;
+    participantIdx++;
+
+    return (participantIdx >= participants.length) ? 0 : participantIdx;
 }
 
-function setCounterShowcase(counter) {
-    const counterName = document.querySelector('[data-counter-name]');
-    const counterLogo = document.querySelector('[data-counter-logo]');
-    const counterDescription = document.querySelector('[data-counter-description]');
-    const counterCalendarSummary = document.querySelector('[data-counter-calendar-summary]');
+function setHighlightedParticipant(participant) {
+    const participantName = document.querySelector('[data-participant-name]');
+    const participantLogo = document.querySelector('[data-participant-logo]');
+    const participantDescription = document.querySelector('[data-participant-description]');
+    const participantCalendarSummary = document.querySelector('[data-participant-calendar-summary]');
 
-    counterName.textContent = counter.name;
-    counterLogo.src = `assets/images/${counter.logo.filename}`;
-    counterLogo.alt = counter.logo.alt;
-    counterDescription.textContent = counter.description;
-    counterCalendarSummary.textContent = counter.calendar_summary;
+    participantName.textContent = participant.name;
+    participantLogo.src = `assets/images/${participant.logo.filename}`;
+    participantLogo.alt = participant.logo.alt;
+    participantDescription.textContent = participant.description;
+    participantCalendarSummary.textContent = participant.calendar_summary;
 }
 
-function checkIsMorning(time) {
+function isMorning(time) {
     return moment(time + ":00", "HH:mm:ss").isBefore(moment("12:00:00", "HH:mm"));
 }
 
-function checkIsAfternoon(time) {
+function isAfternoon(time) {
     return moment(time + ":00", "HH:mm:ss").isSameOrAfter(moment("12:00:00", "HH:mm"));
 }
 
-function getCountersPlannedForTimeOfDay(applicableCounters, day, timeOfDayCheck) {
-    return applicableCounters
-        .map(counter => {
-            return counter.calendar.find(calendar => calendar.day === day && timeOfDayCheck(calendar.start))
-                ? counter.name
+function getParticipantsPlannedForTimeOfDay(applicableParticipants, day, timeOfDayCheck) {
+    return applicableParticipants
+        .map(participant => {
+            const hasMatchingCalendar = function(calendar) {
+                return timeOfDayCheck(calendar.start) && (
+                    calendar.day === day || (
+                        calendar.frequency === "once" &&
+                        moment().startOf("week")
+                            .add(dayToWeekday[day] - 1, "day")
+                            .isSame(moment(calendar.day, "DD-MM-YYYY"), "day")
+                    )
+                );
+            }
+
+            return participant.calendar.find(calendar => hasMatchingCalendar(calendar))
+                ? participant.name
                 : false;
         })
-        .filter(counterName => counterName !== false)
+        .filter(participantName => participantName !== false)
         .join(", ");
 }
 
@@ -289,8 +309,15 @@ function isNthWeekdayOfMonth(weekday, n) {
     const nthWeekdayOfMonth = firstDayOfMonth.add(daysToFirstWeekday, "days");
     nthWeekdayOfMonth.add(n - 1, "week");
 
-    return moment().isSame(nthWeekdayOfMonth, 'week');
+    return moment().isSame(nthWeekdayOfMonth, "week");
+}
 
+function isLastWeekdayOfMonth(weekday) {
+    const lastDayOfMonth = moment().endOf("month");
+    const diff = lastDayOfMonth.isoWeekday() - weekday;
+    const daysToLastWeekday = diff < 0 ? 7 + diff : diff;
+
+    return moment().isSame(lastDayOfMonth.subtract(daysToLastWeekday, "days"), "week");
 }
 
 function updateItinerary() {
@@ -305,41 +332,44 @@ function updateItinerary() {
     const weekNumber = moment().week();
     const isOddWeek = weekNumber % 2 !== 0;
 
-    const applicableCounters = counters.map(counter => {
-        const applicableCalendars = counter.calendar.filter(calendar =>
-            calendar.repeat === "always" ||
-                (calendar.repeat === "even_weeks" && !isOddWeek) ||
-                (calendar.repeat === "odd_weeks" && isOddWeek) ||
-                (calendar.repeat === "first_of_month" && isNthWeekdayOfMonth(dayToWeekday[calendar.day], 1)) ||
-                (calendar.repeat === "third_of_month" && isNthWeekdayOfMonth(dayToWeekday[calendar.day], 3))
+    const applicableParticipants = participants.map(participant => {
+        const applicableCalendars = participant.calendar.filter(calendar =>
+            calendar.frequency === "weekly" ||
+                (calendar.frequency === "even_weeks" && !isOddWeek) ||
+                (calendar.frequency === "odd_weeks" && isOddWeek) ||
+                (calendar.frequency === "first_of_month" && isNthWeekdayOfMonth(dayToWeekday[calendar.day], 1)) ||
+                (calendar.frequency === "second_of_month" && isNthWeekdayOfMonth(dayToWeekday[calendar.day], 2)) ||
+                (calendar.frequency === "third_of_month" && isNthWeekdayOfMonth(dayToWeekday[calendar.day], 3)) ||
+                (calendar.frequency === "fourth_of_month" && isNthWeekdayOfMonth(dayToWeekday[calendar.day], 4)) ||
+                (calendar.frequency === "last_of_month" && isLastWeekdayOfMonth(dayToWeekday[calendar.day])) ||
+                (calendar.frequency === "once" && moment().isSame(moment(calendar.day, "DD-MM-YYYY"), "week"))
         );
 
         return {
-            name: counter.name,
+            name: participant.name,
             calendar: applicableCalendars,
         };
     });
 
-    mondayMorning.textContent = getCountersPlannedForTimeOfDay(applicableCounters, "monday", checkIsMorning);
-    mondayAfternoon.textContent = getCountersPlannedForTimeOfDay(applicableCounters, "monday", checkIsAfternoon);
-    tuesdayMorning.textContent = getCountersPlannedForTimeOfDay(applicableCounters, "tuesday", checkIsMorning);
-    tuesdayAfternoon.textContent = getCountersPlannedForTimeOfDay(applicableCounters, "tuesday", checkIsAfternoon);
-    wednesdayMorning.textContent = getCountersPlannedForTimeOfDay(applicableCounters, "wednesday", checkIsMorning);
-    wednesdayAfternoon.textContent = getCountersPlannedForTimeOfDay(applicableCounters, "wednesday", checkIsAfternoon);
-    thursdayMorning.textContent = getCountersPlannedForTimeOfDay(applicableCounters, "thursday", checkIsMorning);
-    thursdayAfternoon.textContent = getCountersPlannedForTimeOfDay(applicableCounters, "thursday", checkIsAfternoon);
+    mondayMorning.textContent = getParticipantsPlannedForTimeOfDay(applicableParticipants, "monday", isMorning);
+    mondayAfternoon.textContent = getParticipantsPlannedForTimeOfDay(applicableParticipants, "monday", isAfternoon);
+    tuesdayMorning.textContent = getParticipantsPlannedForTimeOfDay(applicableParticipants, "tuesday", isMorning);
+    tuesdayAfternoon.textContent = getParticipantsPlannedForTimeOfDay(applicableParticipants, "tuesday", isAfternoon);
+    wednesdayMorning.textContent = getParticipantsPlannedForTimeOfDay(applicableParticipants, "wednesday", isMorning);
+    wednesdayAfternoon.textContent = getParticipantsPlannedForTimeOfDay(applicableParticipants, "wednesday", isAfternoon);
+    thursdayMorning.textContent = getParticipantsPlannedForTimeOfDay(applicableParticipants, "thursday", isMorning);
+    thursdayAfternoon.textContent = getParticipantsPlannedForTimeOfDay(applicableParticipants, "thursday", isAfternoon);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-
     setItineraryDateRange();
 
-    let counterIdx = 8;
+    let participantIdx = 8;
 
-    counterIdx = nextCounter(counterIdx);
+    participantIdx = highlightNextParticipant(participantIdx);
     setInterval(() => {
-        counterIdx = nextCounter(counterIdx);
-    }, nextCounterInterval);
+        participantIdx = highlightNextParticipant(participantIdx);
+    }, highlightNextParticipantInterval);
 
     updateItinerary();
     setInterval(() => updateItinerary, updateItineraryInterval);

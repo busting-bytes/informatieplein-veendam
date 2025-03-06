@@ -75,18 +75,18 @@ p {
     color: var(--tertiary-color)
 }
 
-.counter {
+.participant {
     padding: 2rem 0 0 2rem;
     border: solid var(--primary-color);
     border-width: 0 0 0 1rem;
 }
 
-.counter-name {
+.participant-name {
     display: inline-block;
     border: 1px solid black;
 }
 
-.counter-logo {
+.participant-logo {
     max-width: 100%;
     max-height: 20vh;
 }
