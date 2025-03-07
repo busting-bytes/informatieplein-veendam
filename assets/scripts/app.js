@@ -225,8 +225,26 @@ const participants = [
                 "start": "14:00",
                 "end": "16:00",
                 "frequency": "third_of_month"
-            }
-        ],
+            },
+    {
+        "name": "Workshop DigiD",
+        "logo": {
+            "filename": "logo_bibliotheekveendam.png",
+            "alt": "Bibliotheek Veendam"
+        },
+        "description": "In twee lessen leer je wat je met jouw DigiD kunt, hoe je een DigiD aanvraagt, krijg je hulp bij het aanvragen van jouw DigiD en leer je wat je ermee kunt doen.": [
+            {
+                "day": "07032025",
+                "start": "14:00",
+                "end": "16:00",
+                "frequency": "once"
+            },
+            {
+                "day": "monday",
+                "start": "14:00",
+                "end": "16:00",
+                "frequency": "third_of_month"
+            }        ],
         "calendar_summary": "Iedere eerste en derde maandag van de maand van 13:00 tot 15:00 uur."
     }
 ]
