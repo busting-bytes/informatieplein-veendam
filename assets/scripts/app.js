@@ -238,13 +238,7 @@ const participants = [
                 "start": "14:00",
                 "end": "16:00",
                 "frequency": "once"
-            },
-            {
-                "day": "monday",
-                "start": "14:00",
-                "end": "16:00",
-                "frequency": "third_of_month"
-            }        ],
+           }        ],
         "calendar_summary": "Iedere eerste en derde maandag van de maand van 13:00 tot 15:00 uur."
     }
 ]
