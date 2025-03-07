@@ -234,7 +234,7 @@ const participants = [
         },
         "description": "In twee lessen leer je wat je met jouw DigiD kunt, hoe je een DigiD aanvraagt, krijg je hulp bij het aanvragen van jouw DigiD en leer je wat je ermee kunt doen.": [
             {
-                "day": "13032025",
+                "day": "13-03-2025",
                 "start": "14:00",
                 "end": "16:00",
                 "frequency": "once"
