@@ -225,23 +225,28 @@ const participants = [
                 "start": "14:00",
                 "end": "16:00",
                 "frequency": "third_of_month"
-            },
+            }
+        ],
+        "calendar_summary": "Iedere eerste en derde maandag van de maand van 13:00 tot 15:00 uur."
+    },
     {
         "name": "Workshop DigiD",
         "logo": {
             "filename": "logo_bibliotheekveendam.png",
             "alt": "Bibliotheek Veendam"
         },
-        "description": "In twee lessen leer je wat je met jouw DigiD kunt, hoe je een DigiD aanvraagt, krijg je hulp bij het aanvragen van jouw DigiD en leer je wat je ermee kunt doen.": [
+        "description": "In twee lessen leer je wat je met jouw DigiD kunt, hoe je een DigiD aanvraagt, krijg je hulp bij het aanvragen van jouw DigiD en leer je wat je ermee kunt doen.",
+        "calendar": [
             {
                 "day": "13-03-2025",
                 "start": "14:00",
                 "end": "16:00",
                 "frequency": "once"
-           }        ],
-        "calendar_summary": "Iedere eerste en derde maandag van de maand van 13:00 tot 15:00 uur."
+           }
+        ],
+        "calendar_summary": "Op donderdag 13 maart van 14:00 tot 16:00 uur."
     }
-]
+];
 
 const highlightNextParticipantInterval = 1000 * 10; // 10s
 const updateItineraryInterval = 1000 * 60 * 60 * 8; // 8h
