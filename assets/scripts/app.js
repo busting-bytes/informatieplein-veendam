@@ -127,7 +127,7 @@ const participants = [
         "calendar_summary": "Op maandagen van 14:00 tot 15:00 uur."
     },
     {
-        "name": "Vanaf 17 maart: Hulp bij woningzaken",
+        "name": "Hulp bij woningzaken",
         "logo": {
             "filename": "logo_acantus.png",
             "alt": "Acantus"
