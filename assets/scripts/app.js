@@ -228,23 +228,6 @@ const participants = [
             }
         ],
         "calendar_summary": "Iedere eerste en derde maandag van de maand van 13:00 tot 15:00 uur."
-    },
-    {
-        "name": "Workshop DigiD deel 2",
-        "logo": {
-            "filename": "logo_bibliotheekveendam.png",
-            "alt": "Bibliotheek Veendam"
-        },
-        "description": "In twee lessen leer je wat je met jouw DigiD kunt, hoe je een DigiD aanvraagt, krijg je hulp bij het aanvragen van jouw DigiD en leer je wat je ermee kunt doen.",
-        "calendar": [
-            {
-                "day": "20-03-2025",
-                "start": "14:00",
-                "end": "16:00",
-                "frequency": "once"
-           }
-        ],
-        "calendar_summary": "Op donderdag 20 maart van 14:00 tot 16:00 uur."
     }
 ];
 
