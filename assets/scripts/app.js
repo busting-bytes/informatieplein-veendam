@@ -230,21 +230,21 @@ const participants = [
         "calendar_summary": "Iedere eerste en derde maandag van de maand van 13:00 tot 15:00 uur."
     },
     {
-        "name": "Workshop DigiD deel 2",
+        "name": "Workshop Wachtwoordbeheer",
         "logo": {
             "filename": "logo_bibliotheekveendam.png",
             "alt": "Bibliotheek Veendam"
         },
-        "description": "In twee lessen leer je wat je met jouw DigiD kunt, hoe je een DigiD aanvraagt, krijg je hulp bij het aanvragen van jouw DigiD en leer je wat je ermee kunt doen.",
+        "description": "Wachtwoorden, je hebt ze overal voor nodig. Vaak moet een wachtwoord aan bepaalde criteria voldoen. En eigenlijk zou je een wachtwoord niet moeten hergebruiken. Hoe onthoud je al die wachtwoorden? Daar zijn goede hulpmiddelen voor. Deze middag leer je er alles over en kom je erachter wat een goed wachtwoord is.",
         "calendar": [
             {
-                "day": "20-03-2025",
+                "day": "10-04-2025",
                 "start": "14:00",
                 "end": "16:00",
                 "frequency": "once"
            }
         ],
-        "calendar_summary": "Op donderdag 20 maart van 14:00 tot 16:00 uur."
+        "calendar_summary": "Op donderdag 10 april van 14:00 tot 16:00 uur."
     }
 ];
 const highlightableParticipants = participants.filter(
