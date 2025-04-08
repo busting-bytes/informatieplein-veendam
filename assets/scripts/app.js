@@ -30,39 +30,46 @@ const participants = [
         ],
         "calendar_summary": "Op maandagen van 14:00 tot 16:00 uur en woensdagen van 10:00 tot 12:00 uur."
     },
-    {
-        "name": "Spreekuur web in de wijk",
-        "logo": {
-            "filename": "logo_webwijk.png",
-            "alt": "Web in de wijk"
-        },
-        "description": "Voor vragen over subsidies, uitkeringen, aanvragen DigiD, formulieren overheid, woningstichting en veel meer.",
-        "calendar": [
-            {
-                "day": "monday",
-                "start": "13:00",
-                "end": "14:30",
-                "frequency": "weekly"
-            }
-        ],
-        "calendar_summary": "Op maandagen van 13:00 tot 14.30 uur."
-    },
+    // {
+    //     "name": "Spreekuur web in de wijk",
+    //     "logo": {
+    //         "filename": "logo_webwijk.png",
+    //         "alt": "Web in de wijk"
+    //     },
+    //     "description": "Voor vragen over subsidies, uitkeringen, aanvragen DigiD, formulieren overheid, woningstichting en veel meer.",
+    //     "calendar": [
+    //         {
+    //             "day": "monday",
+    //             "start": "13:00",
+    //             "end": "14:30",
+    //             "frequency": "weekly"
+    //         }
+    //     ],
+    //     "calendar_summary": "Op maandagen van 13:00 tot 14.30 uur."
+    // },
     {
         "name": "Informatieloket digitale overheid",
         "logo": {
             "filename": "logo_bibliotheekveendam.png",
             "alt": "Bibliotheek Veendam"
         },
-        "description": "Hulp bij contact met de digitale overheid.",
+        "description": "Hulp bij contact met de digitale overheid en digitale hulp algemeen.",
         "calendar": [
             {
                 "day": "monday",
                 "start": "14:00",
                 "end": "16:00",
                 "frequency": "weekly"
+            },
+            {
+                "day": "wednesday",
+                "start": "10:00",
+                "end": "12:00",
+                "frequency": "weekly"
             }
+
         ],
-        "calendar_summary": "Op maandagen van 14:00 tot 16:00 uur."
+        "calendar_summary": "Op maandagen van 14:00 tot 16:00 uur en woensdagen van 10.00 tot 12.00 uur."
     },
     {
         "name": "Loket informatie geheugenproblemen",
@@ -251,6 +258,23 @@ const participants = [
             }
         ],
         "calendar_summary": "Iedere eerste en derde maandag van de maand van 13:00 tot 15:00 uur."
+    },
+    {
+        "name": "Jongerenwerk deBasis",
+        "logo": {
+            "filename": "logo_debasis.png",
+            "alt": "deBasis Veendam"
+        },
+        "description": "Inloopspreekuur Jongerenwerk.",
+        "calendar": [
+            {
+                "day": "31-12-2025",
+                "start": "14:00",
+                "end": "16:00",
+                "frequency": "once"
+           }
+        ],
+        "calendar_summary": "Incidenteel op maandag van 14:00 tot 16:00 uur."
     },
     {
         "name": "Workshop Wachtwoordbeheer",
