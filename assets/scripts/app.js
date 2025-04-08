@@ -20,9 +20,15 @@ const participants = [
                 "start": "14:00",
                 "end": "16:00",
                 "frequency": "weekly"
+            },
+            {
+                "day": "wednesday",
+                "start": "10:00",
+                "end": "12:00",
+                "frequency": "weekly"
             }
         ],
-        "calendar_summary": "Op maandagen van 14:00 tot 16:00 uur."
+        "calendar_summary": "Op maandagen van 14:00 tot 16:00 uur en woensdagen van 10:00 tot 12:00 uur."
     },
     {
         "name": "Spreekuur web in de wijk",
@@ -87,7 +93,7 @@ const participants = [
                 "day": "wednesday",
                 "start": "10:00",
                 "end": "12:00",
-                "frequency": "weekly"
+                "frequency": "odd_weeks"
             }
         ],
         "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur."
@@ -104,7 +110,7 @@ const participants = [
                 "day": "wednesday",
                 "start": "10:00",
                 "end": "12:00",
-                "frequency": "weekly"
+                "frequency": "odd_weeks"
             }
         ],
         "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur."
@@ -182,6 +188,23 @@ const participants = [
             }
         ],
         "calendar_summary": "Oneven weken op maandag van 13:00 tot 15:00 uur."
+    },
+    {
+        "name": "Inloopspreekuur VKB",
+        "logo": {
+            "filename": "Logo_vkb.png",
+            "alt": "VKB"
+        },
+        "description": "De Volkskredietbank Noord Oost Groningen biedt hulp bij schulden en financiële vragen namens en in de gemeenten Veendam, Eemsdelta, Het Hogeland, Oldambt of Pekela.",
+        "calendar": [
+            {
+                "day": "monday",
+                "start": "13:00",
+                "end": "15:00",
+                "frequency": "weekly"
+            }
+        ],
+        "calendar_summary": "Wekelijks op maandag van 13:00 tot 15:00 uur."
     },
     {
         "name": "Vrijwilligers informatiepunt",
