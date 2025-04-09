@@ -188,13 +188,13 @@ const participants = [
         "description": "Voor vragen over je loopbaan of voor een gesprek over je werk met een coach.",
         "calendar": [
             {
-                "day": "monday",
-                "start": "13:00",
-                "end": "15:00",
-                "frequency": "odd_weeks"
+                "day": "wednesday",
+                "start": "10:00",
+                "end": "12:00",
+                "frequency": "even_weeks"
             }
         ],
-        "calendar_summary": "Oneven weken op maandag van 13:00 tot 15:00 uur."
+        "calendar_summary": "Even weken op woensdag van 10:00 tot 12:00 uur."
     },
     {
         "name": "Inloopspreekuur VKB",
