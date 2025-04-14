@@ -277,6 +277,29 @@ const participants = [
         "calendar_summary": "Incidenteel op maandag van 14:00 tot 16:00 uur."
     },
     {
+        "name": "Inloopspreekuur ImpulsLoket",
+        "logo": {
+            "filename": "Logo_Impulsloket.png",
+            "alt": "Nationaal programma Groningen"
+        },
+        "description": "Ben jij betrokken bij een stichting, vereniging, coöperatie zonder winstoogmerk of ben je een kleinschalige ondernemer in de provincie Groningen? Heb je een plan dat de leefbaarheid in jouw omgeving verbetert? Dan kun je een bijdrage ontvangen van het Impulsloket. ",
+        "calendar": [
+            {
+                "day": "07-05-2025",
+                "start": "10:00",
+                "end": "12:00",
+                "frequency": "once"
+           },
+           {
+            "day": "04-06-2025",
+            "start": "10:00",
+            "end": "12:00",
+            "frequency": "once"
+       }
+    ],
+        "calendar_summary": "Op woensdag 7 mei en 4 juni van 10:00 tot 12:00 uur."
+    },
+    {
         "name": "Workshop Wachtwoordbeheer",
         "logo": {
             "filename": "logo_bibliotheekveendam.png",
