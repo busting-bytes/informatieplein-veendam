@@ -74,7 +74,7 @@ const participants = [
     {
         "name": "Loket informatie geheugenproblemen",
         "logo": {
-            "filename": "logo_loketgeheugen.png",
+            "filename": "logo_loketgeheugen4.png",
             "alt": "Buurtzorg, Zorggroep Meander, De Basis"
         },
         "description": "",
