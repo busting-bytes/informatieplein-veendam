@@ -285,31 +285,31 @@ const participants = [
         "description": "Ben jij betrokken bij een stichting, vereniging, coöperatie zonder winstoogmerk of ben je een kleinschalige ondernemer in de provincie Groningen? Heb je een plan dat de leefbaarheid in jouw omgeving verbetert? Dan kun je een bijdrage ontvangen van het Impulsloket. ",
         "calendar": [
             {
-                "day": "07-05-2025",
+                "day": "02-07-2025",
                 "start": "10:00",
                 "end": "12:00",
                 "frequency": "once"
            }
     ],
-        "calendar_summary": "Op woensdag 7 mei en 4 juni van 10:00 tot 12:00 uur."
+        "calendar_summary": "Op woensdag 2 juli, 10 september, 8 oktober, 5 november en 3 december van 10:00 tot 12:00 uur."
     },
-    {
-        "name": "Workshop Wachtwoordbeheer",
-        "logo": {
-            "filename": "logo_bibliotheekveendam.png",
-            "alt": "Bibliotheek Veendam"
-        },
-        "description": "Wachtwoorden, je hebt ze overal voor nodig. Vaak moet een wachtwoord aan bepaalde criteria voldoen. En eigenlijk zou je een wachtwoord niet moeten hergebruiken. Hoe onthoud je al die wachtwoorden? Daar zijn goede hulpmiddelen voor. Deze middag leer je er alles over en kom je erachter wat een goed wachtwoord is.",
-        "calendar": [
-            {
-                "day": "10-04-2025",
-                "start": "14:00",
-                "end": "16:00",
-                "frequency": "once"
-           }
-        ],
-        "calendar_summary": "Op donderdag 10 april van 14:00 tot 16:00 uur."
-    }
+    // {
+    //     "name": "Workshop Wachtwoordbeheer",
+    //     "logo": {
+    //         "filename": "logo_bibliotheekveendam.png",
+    //         "alt": "Bibliotheek Veendam"
+    //     },
+    //     "description": "Wachtwoorden, je hebt ze overal voor nodig. Vaak moet een wachtwoord aan bepaalde criteria voldoen. En eigenlijk zou je een wachtwoord niet moeten hergebruiken. Hoe onthoud je al die wachtwoorden? Daar zijn goede hulpmiddelen voor. Deze middag leer je er alles over en kom je erachter wat een goed wachtwoord is.",
+    //     "calendar": [
+    //         {
+    //             "day": "10-04-2025",
+    //             "start": "14:00",
+    //             "end": "16:00",
+    //             "frequency": "once"
+    //        }
+    //     ],
+    //     "calendar_summary": "Op donderdag 10 april van 14:00 tot 16:00 uur."
+    // }
 ];
 const highlightableParticipants = participants.filter(
     participant => undefined !== participant.calendar.find(calendar => {
