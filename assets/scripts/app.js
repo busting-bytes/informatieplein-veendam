@@ -41,11 +41,11 @@ const participants = [
             {
                 "day": "monday",
                 "start": "13:00",
-                "end": "14:30",
+                "end": "15:30",
                 "frequency": "weekly"
             }
         ],
-        "calendar_summary": "Op maandagen van 13:00 tot 14.30 uur."
+        "calendar_summary": "Op maandagen van 13:00 tot 15.30 uur."
     },
     {
         "name": "Informatieloket digitale overheid",
@@ -168,16 +168,10 @@ const participants = [
                 "day": "monday",
                 "start": "14:00",
                 "end": "16:00",
-                "frequency": "even_weeks"
-            },
-            {
-                "day": "wednesday",
-                "start": "10:00",
-                "end": "12:00",
-                "frequency": "odd_weeks"
+                "frequency": "first_of_month"
             }
         ],
-        "calendar_summary": "Even weken op maandag van 14:00 tot 16:00 uur, oneven weken op woensdag van 10:00 tot 12:00 uur."
+        "calendar_summary": "Eerste maandag van de maand van 14:00 tot 16:00 uur."
     },
     {
         "name": "Inloopspreekuur FNV",
@@ -188,13 +182,13 @@ const participants = [
         "description": "Voor vragen over je loopbaan of voor een gesprek over je werk met een coach.",
         "calendar": [
             {
-                "day": "wednesday",
-                "start": "10:00",
-                "end": "12:00",
-                "frequency": "even_weeks"
+                "day": "thursday",
+                "start": "17:30",
+                "end": "19:30",
+                "frequency": "odd_weeks"
             }
         ],
-        "calendar_summary": "Even weken op woensdag van 10:00 tot 12:00 uur."
+        "calendar_summary": "Oneven weken t/m 17 juli  op donderdag van 17:30 tot 19:30 uur ."
     },
     {
         "name": "Inloopspreekuur VKB",
