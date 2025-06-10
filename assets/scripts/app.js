@@ -8,12 +8,12 @@
  */
 const participants = [
     {
-        "name": "Hulp bij geldzaken en formulieren",
+        "name": "Hulp bij formulieren",
         "logo": {
-            "filename": "logo_loketgeldzaken.png",
-            "alt": "Humanitas, Bibliotheek Veendam"
+            "filename": "logo_humanitas.png",
+            "alt": "Humanitas"
         },
-        "description": "Voor vragen over subsidies, uitkeringen, aanvragen DigiD, formulieren overheid, woningstichting en veel meer.",
+        "description": "Humanitas helpt bij vragen over het invullen van (digitale) formulieren of het aanvragen van toeslagen, subsidies en meer.",
         "calendar": [
             {
                 "day": "monday",
@@ -28,15 +28,38 @@ const participants = [
                 "frequency": "weekly"
             }
         ],
-        "calendar_summary": "Op maandagen van 14:00 tot 16:00 uur en woensdagen van 10:00 tot 12:00 uur."
+        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur en iedere woensdag van 10:00 tot 12:00 uur."
     },
-    {
-        "name": "Spreekuur web in de wijk",
+     {
+        "name": "Hulp digitale zaken",
+        "logo": {
+            "filename": "logo_bibliotheekveendam.png",
+            "alt": "Bibliotheek Veeendam"
+        },
+        "description": "Vragen over je computer, e-reader, smartphone of tablet? Kom naar het digitaal spreekuur.",
+        "calendar": [
+            {
+                "day": "monday",
+                "start": "14:00",
+                "end": "16:00",
+                "frequency": "weekly"
+            },
+            {
+                "day": "wednesday",
+                "start": "10:00",
+                "end": "12:00",
+                "frequency": "weekly"
+            }
+        ],
+        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur en iedere woensdag van 10:00 tot 12:00 uur."
+    },
+   {
+        "name": "Web in de wijk",
         "logo": {
             "filename": "logo_webwijk.png",
             "alt": "Web in de wijk"
         },
-        "description": "Voor vragen over subsidies, uitkeringen, aanvragen DigiD, formulieren overheid, woningstichting en veel meer.",
+        "description": "Graag je digitale vaardigheden verbeteren? Informatie over digitale cursussen en voor vragen op digitaal gebied.",
         "calendar": [
             {
                 "day": "monday",
@@ -48,12 +71,12 @@ const participants = [
         "calendar_summary": "Op maandagen van 13:00 tot 15.30 uur."
     },
     {
-        "name": "Informatieloket digitale overheid",
+        "name": "Informatiepunt digitale overheid",
         "logo": {
             "filename": "logo_bibliotheekveendam.png",
             "alt": "Bibliotheek Veendam"
         },
-        "description": "Hulp bij contact met de digitale overheid en digitale hulp algemeen.",
+        "description": "Zaken regelen met de overheid: het moet steeds vaker online. Kun je hulp gebruiken? Kom dan naar het IDO.",
         "calendar": [
             {
                 "day": "monday",
@@ -69,15 +92,15 @@ const participants = [
             }
 
         ],
-        "calendar_summary": "Op maandagen van 14:00 tot 16:00 uur en woensdagen van 10.00 tot 12.00 uur."
+        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur en iedere woensdag van 10.00 tot 12.00 uur."
     },
     {
-        "name": "Loket informatie geheugenproblemen",
+        "name": "Geheugenproblematiek",
         "logo": {
             "filename": "logo_loketgeheugen4.png",
             "alt": "Buurtzorg, Zorggroep Meander, De Basis"
         },
-        "description": "",
+        "description": "Dit is een gezamenlijk spreekuur van deBasis, Meander, Buurtzorg en TSN.",
         "calendar": [
             {
                 "day": "monday",
@@ -86,7 +109,7 @@ const participants = [
                 "frequency": "weekly"
             }
         ],
-        "calendar_summary": "Op maandagen van 14:00 tot 16:00 uur."
+        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur."
     },
     {
         "name": "Loket Leefbaarheid",
@@ -94,7 +117,7 @@ const participants = [
             "filename": "logo_loketleefbaarheid.png",
             "alt": "Groninger Dorpen, Loko Loket, Loket Leefbaarheid"
         },
-        "description": "Heb je samen met buurtgenoten een leuk plan bedacht dat bijdraagt aan prettig wonen in jouw straat of dorp? Loket Leefbaarheid is een subsidieregeling voor inwoners uit de hele provincie Groningen.",
+        "description": "Tijdens het spreekuur kun je terecht voor aanvragen om de gemeente Veendam leefbaarder te maken. Ook wordt er informatie gegeven over het algehele proces en het uitvoeren van een project.",
         "calendar": [
             {
                 "day": "wednesday",
@@ -106,12 +129,12 @@ const participants = [
         "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur."
     },
     {
-        "name": "Loket Buurtgezinnen",
+        "name": "Buurtgezinnen",
         "logo": {
             "filename": "logo_loketbuurtgezinnen.png",
             "alt": "Buurtgezinnen"
         },
-        "description": "Onder het motto 'Opvoeden doen we samen', koppelt Buurtgezinnen gezinnen die steun kunnen gebruiken aan een stabiel gezin in de buurt. Zo krijgen kinderen wat extra liefde en aandacht en worden ouders ontlast.",
+        "description": "Inloopmoment van Buurtgezinnen. Heb je steun nodig of kun je het geven? (niet in schoolvakanties).",
         "calendar": [
             {
                 "day": "wednesday",
@@ -123,12 +146,12 @@ const participants = [
         "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur."
     },
     {
-        "name": "Informatiepunt Taalhuis",
+        "name": "Taalhuis spreekuur",
         "logo": {
             "filename": "logo_bibliotheekveendam.png",
             "alt": "Bibliotheek Veendam"
         },
-        "description": "Tijdens dit spreekuur kun je samen met de Taalhuiscoördinator bekijken wat je nodig hebt en wat bij je past. Dat kan bijvoorbeeld een oefenboek zijn of een cursus.",
+        "description": "Elke week is er een spreekuur op het Informatieplein met de Taalhuiscoördinator. Samen bekijken jullie wat je nodig hebt en wat bij je past.",
         "calendar": [
             {
                 "day": "monday",
@@ -140,12 +163,12 @@ const participants = [
         "calendar_summary": "Op maandagen van 14:00 tot 15:00 uur."
     },
     {
-        "name": "Hulp bij woningzaken",
+        "name": "Acantus",
         "logo": {
             "filename": "logo_acantus.png",
             "alt": "Acantus"
         },
-        "description": "Voor vragen over woning huren, doorschuiven naar een ander huis, leefbaarheid in je wijk en meer.",
+        "description": "Voor al je vragen over wonen. Wil je een woning huren of doorschuiven naar een ander huis, heb je vragen over leefbaarheid in je wijk?",
         "calendar": [
             {
                 "day": "monday",
@@ -154,15 +177,15 @@ const participants = [
                 "frequency": "weekly"
             }
         ],
-        "calendar_summary": "Op maandagen van 14:00 tot 16:00 uur."
+        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur."
     },
     {
-        "name": "Maatje voor hulp bij geldzaken",
+        "name": "Schuldhulpmaatje",
         "logo": {
             "filename": "logo_schuldhm.png",
             "alt": "SchuldHulpMaatje"
         },
-        "description": "Voor vragen over hulp en/of een maatje bij geldzaken.",
+        "description": "Schuldhulpmaatje pakt samen met jou je geldproblemen aan. Gratis en zonder oordeel.",
         "calendar": [
             {
                 "day": "monday",
@@ -174,12 +197,12 @@ const participants = [
         "calendar_summary": "Eerste maandag van de maand van 14:00 tot 16:00 uur."
     },
     {
-        "name": "Inloopspreekuur FNV",
+        "name": "FNV loopbaancoaching",
         "logo": {
             "filename": "logo_fnv.png",
             "alt": "FNV"
         },
-        "description": "Voor vragen over je loopbaan of voor een gesprek over je werk met een coach.",
+        "description": "Heb je een vraag over je loopbaan of wil je met een coach praten over je werk? Kom naar de loopbaanadviseurs in de bibliotheek.",
         "calendar": [
             {
                 "day": "thursday",
@@ -188,15 +211,15 @@ const participants = [
                 "frequency": "odd_weeks"
             }
         ],
-        "calendar_summary": "Oneven weken t/m 17 juli  op donderdag van 17:30 tot 19:30 uur ."
+        "calendar_summary": "Oneven weken t/m 17 juli op donderdag van 17:30 tot 19:30 uur ."
     },
     {
-        "name": "Inloopspreekuur VKB",
+        "name": "Hulp bij geldzaken",
         "logo": {
             "filename": "Logo_vkb.png",
             "alt": "VKB"
         },
-        "description": "De Volkskredietbank Noord Oost Groningen biedt hulp bij schulden en financiële vragen namens en in de gemeenten Veendam, Eemsdelta, Het Hogeland, Oldambt of Pekela.",
+        "description": "Spreekuur VKB. Heb je moeite met het betalen van rekeningen of heb je financiëel advies nodig? Samen zorgen we voor financiële rust en stabiliteit.",
         "calendar": [
             {
                 "day": "monday",
@@ -205,7 +228,7 @@ const participants = [
                 "frequency": "weekly"
             }
         ],
-        "calendar_summary": "Wekelijks op maandag van 13:00 tot 15:00 uur."
+        "calendar_summary": "Iedere maandag van 13:00 tot 15:00 uur."
     },
     {
         "name": "Vrijwilligers informatiepunt",
@@ -213,7 +236,7 @@ const participants = [
             "filename": "logo_vip.png",
             "alt": "Vrijwilligers Informatiepunt"
         },
-        "description": "Kom langs bij ons voor het zoeken of plaatsen van vacatures, voor informatie, advies en belangenbehartiging en deskundigheidsbevordering van vrijwilligers.",
+        "description": "Voor mensen die vrijwilligerswerk willen doen en voor organisaties die vrijwilligers zoeken",
         "calendar": [
             {
                 "day": "monday",
@@ -228,15 +251,15 @@ const participants = [
                 "frequency": "third_of_month"
             }
         ],
-        "calendar_summary": "Iedere eerste en derde maandag van de maand van 13:00 tot 15:00 uur."
+        "calendar_summary": "Iedere eerste en derde maandag van de maand van 14:00 tot 16:00 uur."
     },
     {
-        "name": "Loket Stichting Leergeld",
+        "name": "Stichting Leergeld",
         "logo": {
             "filename": "logo_stleergeld.png",
             "alt": "Stichting Leergeld"
         },
-        "description": "Je kunt een vergoeding aanvragen voor activiteiten op het gebied van onderwijs, sport, cultuur en welzijn.",
+        "description": "Stichting Leergeld biedt waar nodig financiële hulp aan gezinnen. Er kunnen aanvragen worden gedaan voor binnen- of buitenschoolse activiteiten.",
         "calendar": [
             {
                 "day": "monday",
@@ -251,7 +274,7 @@ const participants = [
                 "frequency": "third_of_month"
             }
         ],
-        "calendar_summary": "Iedere eerste en derde maandag van de maand van 13:00 tot 15:00 uur."
+        "calendar_summary": "Iedere eerste en derde maandag van de maand van 14:00 tot 16:00 uur."
     },
     {
         "name": "Jongerenwerk deBasis",
@@ -259,7 +282,7 @@ const participants = [
             "filename": "logo_debasis.png",
             "alt": "deBasis Veendam"
         },
-        "description": "Inloopspreekuur Jongerenwerk.",
+        "description": "Een plek waar jongeren terecht kunnen met vragen over vrije tijd/activiteiten, werk, school, contact, geld kortom alles wat jongeren bezig kan houden.",
         "calendar": [
             {
                 "day": "31-12-2025",
@@ -268,15 +291,15 @@ const participants = [
                 "frequency": "once"
            }
         ],
-        "calendar_summary": "Incidenteel op maandag van 14:00 tot 16:00 uur."
+        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur van september t/m juni."
     },
     {
-        "name": "Inloopspreekuur ImpulsLoket",
+        "name": "ImpulsLoket Nationaal Programma Groningen",
         "logo": {
             "filename": "Logo_Impulsloket.png",
             "alt": "Nationaal programma Groningen"
         },
-        "description": "Ben jij betrokken bij een stichting, vereniging, coöperatie zonder winstoogmerk of ben je een kleinschalige ondernemer in de provincie Groningen? Heb je een plan dat de leefbaarheid in jouw omgeving verbetert? Dan kun je een bijdrage ontvangen van het Impulsloket. ",
+        "description": "Subsidie voor stichting, vereniging, coöperatie zonder winstoogmerk. Heb je een plan dat de leefbaarheid in jouw omgeving verbetert?",
         "calendar": [
             {
                 "day": "02-07-2025",
@@ -312,7 +335,8 @@ const highlightableParticipants = participants.filter(
     })
 );
 
-const highlightNextParticipantInterval = 1000 * 10; // 10s
+// const highlightNextParticipantInterval = 1000 * 10; // 10s
+const highlightNextParticipantInterval = 1000 * 10; // 6s
 const updateItineraryInterval = 1000 * 60 * 60 * 8; // 8h
 const dayToWeekday = {
     "monday": 1,
