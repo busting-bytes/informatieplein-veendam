@@ -126,7 +126,7 @@ const participants = [
                 "frequency": "odd_weeks"
             }
         ],
-        "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur."
+        "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur, niet van 14 juli tot/met 25 augustus."
     },
     {
         "name": "Buurtgezinnen",
