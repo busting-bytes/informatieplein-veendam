@@ -302,13 +302,31 @@ const participants = [
         "description": "Subsidie voor stichting, vereniging, coöperatie zonder winstoogmerk. Heb je een plan dat de leefbaarheid in jouw omgeving verbetert?",
         "calendar": [
             {
-                "day": "02-07-2025",
+                "day": "10-09-2025",
+                "start": "10:00",
+                "end": "12:00",
+                "frequency": "once"
+           },
+            {
+                "day": "08-10-2025",
+                "start": "10:00",
+                "end": "12:00",
+                "frequency": "once"
+           },
+            {
+                "day": "05-11-2025",
+                "start": "10:00",
+                "end": "12:00",
+                "frequency": "once"
+           },
+            {
+                "day": "03-12-2025",
                 "start": "10:00",
                 "end": "12:00",
                 "frequency": "once"
            }
     ],
-        "calendar_summary": "Op woensdag 2 juli, 10 september, 8 oktober, 5 november en 3 december van 10:00 tot 12:00 uur."
+        "calendar_summary": "Op 10 september, 8 oktober, 5 november en 3 december van 10:00 tot 12:00 uur."
     },
     // {
     //     "name": "Workshop Wachtwoordbeheer",
