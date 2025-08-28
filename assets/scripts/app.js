@@ -128,23 +128,23 @@ const participants = [
         ],
         "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur, niet van 14 juli tot/met 25 augustus."
     },
-    {
-        "name": "Buurtgezinnen",
-        "logo": {
-            "filename": "logo_loketbuurtgezinnen.png",
-            "alt": "Buurtgezinnen"
-        },
-        "description": "Inloopmoment van Buurtgezinnen. Heb je steun nodig of kun je het geven? (niet in schoolvakanties).",
-        "calendar": [
-            {
-                "day": "wednesday",
-                "start": "10:00",
-                "end": "12:00",
-                "frequency": "odd_weeks"
-            }
-        ],
-        "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur."
-    },
+    // {
+    //     "name": "Buurtgezinnen",
+    //     "logo": {
+    //         "filename": "logo_loketbuurtgezinnen.png",
+    //         "alt": "Buurtgezinnen"
+    //     },
+    //     "description": "Inloopmoment van Buurtgezinnen. Heb je steun nodig of kun je het geven? (niet in schoolvakanties).",
+    //     "calendar": [
+    //         {
+    //             "day": "wednesday",
+    //             "start": "10:00",
+    //             "end": "12:00",
+    //             "frequency": "odd_weeks"
+    //         }
+    //     ],
+    //     "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur."
+    // },
     {
         "name": "Taalhuis spreekuur",
         "logo": {
@@ -214,7 +214,7 @@ const participants = [
         "calendar_summary": "Oneven weken t/m 17 juli op donderdag van 17:30 tot 19:30 uur ."
     },
     {
-        "name": "Hulp bij geldzaken",
+        "name": "VKB: Hulp bij geldzaken",
         "logo": {
             "filename": "Logo_vkb.png",
             "alt": "VKB"
