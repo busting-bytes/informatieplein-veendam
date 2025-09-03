@@ -229,7 +229,7 @@ const participants = [
                 "frequency": "weekly"
             }
         ],
-        "calendar_summary": "Iedere maandag van 13:00 tot 15:00 uur. Afwezig op 22 september en 27 oktober."
+        "calendar_summary": "Iedere maandag van 13:00 tot 15:00 uur. Niet aanwezig op 22 september en 27 oktober."
     },
     {
         "name": "Vrijwilligers informatiepunt",
