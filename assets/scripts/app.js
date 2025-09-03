@@ -129,6 +129,7 @@ const participants = [
         "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur, niet van 14 juli tot/met 25 augustus."
     },
     // {
+    //     #### terug aanpassen voor 17 september  ###
     //     "name": "Buurtgezinnen",
     //     "logo": {
     //         "filename": "logo_loketbuurtgezinnen.png",
@@ -228,7 +229,7 @@ const participants = [
                 "frequency": "weekly"
             }
         ],
-        "calendar_summary": "Iedere maandag van 13:00 tot 15:00 uur."
+        "calendar_summary": "Iedere maandag van 13:00 tot 15:00 uur. Afwezig op 22 september en 27 oktober."
     },
     {
         "name": "Vrijwilligers informatiepunt",
@@ -328,23 +329,22 @@ const participants = [
     ],
         "calendar_summary": "Op 10 september, 8 oktober, 5 november en 3 december van 10:00 tot 12:00 uur."
     },
-    // {
-    //     "name": "Workshop Wachtwoordbeheer",
-    //     "logo": {
-    //         "filename": "logo_bibliotheekveendam.png",
-    //         "alt": "Bibliotheek Veendam"
-    //     },
-    //     "description": "Wachtwoorden, je hebt ze overal voor nodig. Vaak moet een wachtwoord aan bepaalde criteria voldoen. En eigenlijk zou je een wachtwoord niet moeten hergebruiken. Hoe onthoud je al die wachtwoorden? Daar zijn goede hulpmiddelen voor. Deze middag leer je er alles over en kom je erachter wat een goed wachtwoord is.",
-    //     "calendar": [
-    //         {
-    //             "day": "10-04-2025",
-    //             "start": "14:00",
-    //             "end": "16:00",
-    //             "frequency": "once"
-    //        }
-    //     ],
-    //     "calendar_summary": "Op donderdag 10 april van 14:00 tot 16:00 uur."
-    // }
+    {
+        "name": "Workshop Navigatie",
+        "logo": {
+            "filename": "logo_bibliotheekveendam.png",
+            "alt": "Bibliotheek Veendam"
+        },
+        "description": "Workshop over routeplanners en routes plannen. Als voorbeeld navigeren met Google Maps." [
+            {
+                "day": "30-10-2025",
+                "start": "14:00",
+                "end": "16:00",
+                "frequency": "once"
+           }
+        ],
+        "calendar_summary": "Op donderdag 30 oktober van 14:00 tot 16:00 uur."
+    }
 ];
 const highlightableParticipants = participants.filter(
     participant => undefined !== participant.calendar.find(calendar => {
