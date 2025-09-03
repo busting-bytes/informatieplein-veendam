@@ -129,14 +129,12 @@ const participants = [
         "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur, niet van 14 juli tot/met 25 augustus."
     },
     // {
-/**
- *   #### terug aanpassen voor 17 september  ###
- */
+    //   #### terug aanpassen voor 17 september  ###
     //     "name": "Buurtgezinnen",
     //     "logo": {
     //         "filename": "logo_loketbuurtgezinnen.png",
     //         "alt": "Buurtgezinnen"
-        //     },
+    //     },
     //     "description": "Inloopmoment van Buurtgezinnen. Heb je steun nodig of kun je het geven? (niet in schoolvakanties).",
     //     "calendar": [
     //         {
