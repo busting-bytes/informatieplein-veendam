@@ -221,7 +221,7 @@ const participants = [
     {
         "name": "VKB: Hulp bij geldzaken",
         "logo": {
-            "filename": "Logo_vkb.png",
+            "filename": "Logo_VKB.png",
             "alt": "VKB"
         },
         "description": "Spreekuur VKB. Heb je moeite met het betalen van rekeningen of heb je financiëel advies nodig? Samen zorgen we voor financiële rust en stabiliteit.",
