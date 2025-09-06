@@ -4,7 +4,8 @@
  * - "even_weeks": every even week
  * - "odd_weeks": every odd week
  * - "*_of_month": every (first | second | third | fourth | last) weekday of the month, where the weekday is specified in the "day" property
- * - "once": once on a specified date taken from the "day" property
+ * - "once": once on a specified date (DD-MM-YYYY) taken from the "day" property
+ * - "except": exception to the previously defined frequency - expects a specific date in the "day" property
  */
 const participants = [
     {
@@ -68,7 +69,7 @@ const participants = [
                 "frequency": "weekly"
             }
         ],
-        "calendar_summary": "Op maandagen van 13:00 tot 15.30 uur."
+        "calendar_summary": "Op maandagen van 13:00 tot 15:30 uur."
     },
     {
         "name": "Informatiepunt digitale overheid",
@@ -92,7 +93,7 @@ const participants = [
             }
 
         ],
-        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur en iedere woensdag van 10.00 tot 12.00 uur."
+        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur en iedere woensdag van 10:00 tot 12:00 uur."
     },
     {
         "name": "Geheugenproblematiek",
@@ -128,24 +129,27 @@ const participants = [
         ],
         "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur, niet van 14 juli tot/met 25 augustus."
     },
-    // {
-    //   #### terug aanpassen voor 17 september  ###
-    //     "name": "Buurtgezinnen",
-    //     "logo": {
-    //         "filename": "logo_loketbuurtgezinnen.png",
-    //         "alt": "Buurtgezinnen"
-    //     },
-    //     "description": "Inloopmoment van Buurtgezinnen. Heb je steun nodig of kun je het geven? (niet in schoolvakanties).",
-    //     "calendar": [
-    //         {
-    //             "day": "wednesday",
-    //             "start": "10:00",
-    //             "end": "12:00",
-    //             "frequency": "odd_weeks"
-    //         }
-    //     ],
-    //     "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur."
-    // },
+    {
+        "name": "Buurtgezinnen",
+        "logo": {
+            "filename": "logo_loketbuurtgezinnen.png",
+            "alt": "Buurtgezinnen"
+        },
+        "description": "Inloopmoment van Buurtgezinnen. Heb je steun nodig of kun je het geven? (niet in schoolvakanties).",
+        "calendar": [
+            {
+                "day": "wednesday",
+                "start": "10:00",
+                "end": "12:00",
+                "frequency": "odd_weeks"
+            },
+            {
+                "day": "10-09-2025",
+                "frequency": "except"
+            }
+        ],
+        "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur."
+    },
     {
         "name": "Taalhuis spreekuur",
         "logo": {
@@ -227,6 +231,14 @@ const participants = [
                 "start": "13:00",
                 "end": "15:00",
                 "frequency": "weekly"
+            },
+            {
+                "day": "22-09-2025",
+                "frequency": "except"
+            },
+            {
+                "day": "27-10-2025",
+                "frequency": "except"
             }
         ],
         "calendar_summary": "Iedere maandag van 13:00 tot 15:00 uur. Niet aanwezig op 22 september en 27 oktober."
@@ -326,7 +338,7 @@ const participants = [
                 "end": "12:00",
                 "frequency": "once"
            }
-    ],
+        ],
         "calendar_summary": "Op 10 september, 8 oktober, 5 november en 3 december van 10:00 tot 12:00 uur."
     },
     {
@@ -335,7 +347,8 @@ const participants = [
             "filename": "logo_bibliotheekveendam.png",
             "alt": "Bibliotheek Veendam"
         },
-        "description": "Workshop over routeplanners en routes plannen. Als voorbeeld navigeren met Google Maps." [
+        "description": "Workshop over routeplanners en routes plannen. Als voorbeeld navigeren met Google Maps.",
+        "calendar": [
             {
                 "day": "30-10-2025",
                 "start": "14:00",
@@ -348,13 +361,15 @@ const participants = [
 ];
 const highlightableParticipants = participants.filter(
     participant => undefined !== participant.calendar.find(calendar => {
-        return calendar.frequency !== "once"
-            || moment(calendar.day, "DD-MM-YYYY").isSameOrAfter(moment(), "day");
+        return calendar.frequency !== "except" && (
+            calendar.frequency !== "once"
+            || moment(calendar.day, "DD-MM-YYYY").isSameOrAfter(moment(), "day")
+        );
     })
 );
 
 // const highlightNextParticipantInterval = 1000 * 10; // 10s
-const highlightNextParticipantInterval = 1000 * 10; // 6s
+const highlightNextParticipantInterval = 1000 * 6; // 6s
 const updateItineraryInterval = 1000 * 60 * 60 * 8; // 8h
 const dayToWeekday = {
     "monday": 1,
@@ -405,20 +420,25 @@ function isAfternoon(time) {
 function getParticipantsPlannedForTimeOfDay(applicableParticipants, day, timeOfDayCheck) {
     return applicableParticipants
         .map(participant => {
+            const todaysDate = moment().startOf("week")
+                .add(dayToWeekday[day] - 1, "day");
             const hasMatchingCalendar = function(calendar) {
                 return timeOfDayCheck(calendar.start) && (
                     calendar.day === day || (
-                        calendar.frequency === "once" &&
-                        moment().startOf("week")
-                            .add(dayToWeekday[day] - 1, "day")
-                            .isSame(moment(calendar.day, "DD-MM-YYYY"), "day")
+                        calendar.frequency === "once" && todaysDate.isSame(moment(calendar.day, "DD-MM-YYYY"), "day")
                     )
                 );
+            };
+
+            if (!participant.calendar.find(calendar => hasMatchingCalendar(calendar))) {
+                return false;
             }
 
-            return participant.calendar.find(calendar => hasMatchingCalendar(calendar))
-                ? participant.name
-                : false;
+            if (participant.exceptions.find(exception => todaysDate.isSame(moment(exception.day, "DD-MM-YYYY"), "day"))) {
+                return false;
+            }
+
+            return participant.name;
         })
         .filter(participantName => participantName !== false)
         .join(", ");
@@ -468,9 +488,14 @@ function updateItinerary() {
                 (calendar.frequency === "once" && moment().isSame(moment(calendar.day, "DD-MM-YYYY"), "week"))
         );
 
+        const exceptions = participant.calendar.filter(calendar =>
+            calendar.frequency === "except" && moment().isSame(moment(calendar.day, "DD-MM-YYYY"), "week")
+        );
+
         return {
             name: participant.name,
             calendar: applicableCalendars,
+            exceptions: exceptions,
         };
     });
 
