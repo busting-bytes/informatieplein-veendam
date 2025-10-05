@@ -262,9 +262,21 @@ const participants = [
                 "start": "14:00",
                 "end": "16:00",
                 "frequency": "third_of_month"
+            },
+           {
+                "day": "wednesday",
+                "start": "10:00",
+                "end": "12:00",
+                "frequency": "second_of_month"
+            },
+            {
+                "day": "wednesday",
+                "start": "10:00",
+                "end": "12:00",
+                "frequency": "fourth_of_month"
             }
         ],
-        "calendar_summary": "Iedere eerste en derde maandag van de maand van 14:00 tot 16:00 uur."
+        "calendar_summary": "Iedere eerste en derde maandag van de maand van 14:00 tot 16:00 uur en tweede en vierde woensdag van de maand van 10:00 tot 12:00 uur."
     },
     {
         "name": "Stichting Leergeld",
@@ -285,9 +297,21 @@ const participants = [
                 "start": "14:00",
                 "end": "16:00",
                 "frequency": "third_of_month"
+            },
+           {
+                "day": "wednesday",
+                "start": "10:00",
+                "end": "12:00",
+                "frequency": "second_of_month"
+            },
+            {
+                "day": "wednesday",
+                "start": "10:00",
+                "end": "12:00",
+                "frequency": "fourth_of_month"
             }
         ],
-        "calendar_summary": "Iedere eerste en derde maandag van de maand van 14:00 tot 16:00 uur."
+        "calendar_summary": "Iedere eerste en derde maandag van de maand van 14:00 tot 16:00 uur en tweede en vierde woensdag van de maand van 10:00 tot 12:00 uur."
     },
     {
         "name": "Jongerenwerk deBasis",
