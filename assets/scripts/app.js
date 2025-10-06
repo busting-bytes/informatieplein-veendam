@@ -127,7 +127,7 @@ const participants = [
                 "frequency": "odd_weeks"
             }
         ],
-        "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur, niet van 14 juli tot/met 25 augustus."
+        "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur."
     },
     {
         "name": "Buurtgezinnen",
@@ -142,10 +142,10 @@ const participants = [
                 "start": "10:00",
                 "end": "12:00",
                 "frequency": "odd_weeks"
-            },
-            {
-                "day": "10-09-2025",
-                "frequency": "except"
+            // },
+            // {
+            //     "day": "10-09-2025",
+            //     "frequency": "except"
             }
         ],
         "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur."
@@ -233,15 +233,11 @@ const participants = [
                 "frequency": "weekly"
             },
             {
-                "day": "22-09-2025",
-                "frequency": "except"
-            },
-            {
                 "day": "27-10-2025",
                 "frequency": "except"
             }
         ],
-        "calendar_summary": "Iedere maandag van 13:00 tot 15:00 uur. Niet aanwezig op 22 september en 27 oktober."
+        "calendar_summary": "Iedere maandag van 13:00 tot 15:00 uur. Niet aanwezig op 27 oktober."
     },
     {
         "name": "Vrijwilligers informatiepunt",
@@ -257,17 +253,17 @@ const participants = [
                 "end": "16:00",
                 "frequency": "first_of_month"
             },
-            {
-                "day": "monday",
-                "start": "14:00",
-                "end": "16:00",
-                "frequency": "third_of_month"
-            },
            {
                 "day": "wednesday",
                 "start": "10:00",
                 "end": "12:00",
                 "frequency": "second_of_month"
+            },
+            {
+                "day": "monday",
+                "start": "14:00",
+                "end": "16:00",
+                "frequency": "third_of_month"
             },
             {
                 "day": "wednesday",
@@ -292,19 +288,19 @@ const participants = [
                 "end": "16:00",
                 "frequency": "first_of_month"
             },
-            {
-                "day": "monday",
-                "start": "14:00",
-                "end": "16:00",
-                "frequency": "third_of_month"
-            },
-           {
+          {
                 "day": "wednesday",
                 "start": "10:00",
                 "end": "12:00",
                 "frequency": "second_of_month"
             },
             {
+                "day": "monday",
+                "start": "14:00",
+                "end": "16:00",
+                "frequency": "third_of_month"
+            },
+             {
                 "day": "wednesday",
                 "start": "10:00",
                 "end": "12:00",
@@ -339,12 +335,6 @@ const participants = [
         "description": "Subsidie voor stichting, vereniging, coöperatie zonder winstoogmerk. Heb je een plan dat de leefbaarheid in jouw omgeving verbetert?",
         "calendar": [
             {
-                "day": "10-09-2025",
-                "start": "10:00",
-                "end": "12:00",
-                "frequency": "once"
-           },
-            {
                 "day": "08-10-2025",
                 "start": "10:00",
                 "end": "12:00",
@@ -363,7 +353,7 @@ const participants = [
                 "frequency": "once"
            }
         ],
-        "calendar_summary": "Op 10 september, 8 oktober, 5 november en 3 december van 10:00 tot 12:00 uur."
+        "calendar_summary": "Op 8 oktober, 5 november en 3 december van 10:00 tot 12:00 uur."
     },
     {
         "name": "Workshop Navigatie",
