@@ -356,6 +356,41 @@ const participants = [
         "calendar_summary": "Op 8 oktober, 5 november en 3 december van 10:00 tot 12:00 uur."
     },
     {
+        "name": "Veendam Beweegt",
+        "logo": {
+            "filename": "logo_veendambeweegt.png",
+            "alt": "Veendam Beweegt"
+        },
+        "description": "Veendam Beweegt stimuleert een actieve en gezonde levensstijl voor alle inwoners van Veendam. Wij bieden diverse beweegactiviteiten, ondersteunen verenigingen en sportaccommodaties en organiseren evenementen.",
+        "calendar": [
+            {
+                "day": "05-11-2025",
+                "start": "10:00",
+                "end": "12:00",
+                "frequency": "once"
+           },
+            {
+                "day": "19-11-2025",
+                "start": "10:00",
+                "end": "12:00",
+                "frequency": "once"
+           },
+            {
+                "day": "03-12-2025",
+                "start": "10:00",
+                "end": "12:00",
+                "frequency": "once"
+           },
+            {
+                "day": "17-12-2025",
+                "start": "10:00",
+                "end": "12:00",
+                "frequency": "once"
+           }
+        ],
+        "calendar_summary": "Op 5 en 19 november en op 3 en 14 december van 10:00 tot 12:00 uur."
+    },
+    {
         "name": "Workshop Navigatie",
         "logo": {
             "filename": "logo_bibliotheekveendam.png",
