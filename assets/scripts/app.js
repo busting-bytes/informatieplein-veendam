@@ -309,23 +309,23 @@ const participants = [
         ],
         "calendar_summary": "Iedere eerste en derde maandag van de maand van 14:00 tot 16:00 uur en tweede en vierde woensdag van de maand van 10:00 tot 12:00 uur."
     },
-    {
-        "name": "Jongerenwerk deBasis",
-        "logo": {
-            "filename": "logo_debasis.png",
-            "alt": "deBasis Veendam"
-        },
-        "description": "Een plek waar jongeren terecht kunnen met vragen over vrije tijd/activiteiten, werk, school, contact, geld kortom alles wat jongeren bezig kan houden.",
-        "calendar": [
-            {
-                "day": "31-12-2025",
-                "start": "14:00",
-                "end": "16:00",
-                "frequency": "once"
-           }
-        ],
-        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur van september t/m juni."
-    },
+    // {
+    //     "name": "Jongerenwerk deBasis",
+    //     "logo": {
+    //         "filename": "logo_debasis.png",
+    //         "alt": "deBasis Veendam"
+    //     },
+    //     "description": "Een plek waar jongeren terecht kunnen met vragen over vrije tijd/activiteiten, werk, school, contact, geld kortom alles wat jongeren bezig kan houden.",
+    //     "calendar": [
+    //         {
+    //             "day": "31-12-2025",
+    //             "start": "14:00",
+    //             "end": "16:00",
+    //             "frequency": "once"
+    //        }
+    //     ],
+    //     "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur van september t/m juni."
+    // },
     {
         "name": "ImpulsLoket Nationaal Programma Groningen",
         "logo": {
