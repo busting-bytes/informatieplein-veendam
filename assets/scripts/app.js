@@ -151,6 +151,29 @@ const participants = [
         "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur."
     },
     {
+        "name": "Loket Vroegsignalering gemeente Veendam",
+        "logo": {
+            "filename": "logo_gemeenteveendam.png",
+            "alt": "Vroegsignalering"
+        },
+        "description": "De gemeente ontvangt meldingen van energieleveranciers, zorgverzekeraars en woningcorporaties over achterstallige betalingen. De gemeente biedt gratis hulp via het Vroeg Eropaf team, bestaande uit de gemeente en deBasis. Het doel is om te voorkomen dat betalingsachterstanden uitgroeien tot grotere financiële problemen.",
+        "calendar": [
+            {
+                "day": "14-01-2026",
+                "start": "10:00",
+                "end": "12:00",
+                "frequency": "once"
+           }
+            // {
+            //     "day": "wednesday",
+            //     "start": "10:00",
+            //     "end": "12:00",
+            //     "frequency": "odd_weeks"
+            // }
+        ],
+        "calendar_summary": "Vanaf 14 januari 2026 de oneven weken op woensdag van 10:00 tot 12:00 uur."
+    },
+    {
         "name": "Taalhuis spreekuur",
         "logo": {
             "filename": "logo_bibliotheekveendam.png",
