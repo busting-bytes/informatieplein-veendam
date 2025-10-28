@@ -151,12 +151,12 @@ const participants = [
         "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur."
     },
     {
-        "name": "Loket Vroegsignalering gemeente Veendam",
+        "name": "Vroegsignalering: Zorgen over geld? Wij luisteren en helpen graag!",
         "logo": {
             "filename": "logo_gemeenteveendam.png",
             "alt": "Vroegsignalering"
         },
-        "description": "De gemeente ontvangt meldingen van energieleveranciers, zorgverzekeraars en woningcorporaties over achterstallige betalingen. De gemeente biedt gratis hulp via het Vroeg Eropaf team, bestaande uit de gemeente en deBasis. Het doel is om te voorkomen dat betalingsachterstanden uitgroeien tot grotere financiële problemen.",
+        "description": "Heeft u moeite met het betalen van rekeningen of maakt u zich zorgen over uw geldzaken? Kom dan gratis en zonder afspraak langs bij het spreekuur van Vroegsignalering. Wij luisteren, denken mee en helpen u bij het vinden van een oplossing die bij u past.",
         "calendar": [
             {
                 "day": "14-01-2026",
@@ -260,7 +260,7 @@ const participants = [
                 "frequency": "except"
             }
         ],
-        "calendar_summary": "Iedere maandag van 13:00 tot 15:00 uur. Niet aanwezig op 27 oktober."
+        "calendar_summary": "Iedere maandag van 13:00 tot 15:00 uur."
     },
     {
         "name": "Vrijwilligers informatiepunt",
@@ -376,7 +376,7 @@ const participants = [
                 "frequency": "once"
            }
         ],
-        "calendar_summary": "Op 8 oktober, 5 november en 3 december van 10:00 tot 12:00 uur."
+        "calendar_summary": "Op 5 november en 3 december van 10:00 tot 12:00 uur."
     },
     {
         "name": "Veendam Beweegt",
