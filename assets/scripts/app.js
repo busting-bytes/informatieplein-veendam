@@ -9,6 +9,22 @@
  */
 const participants = [
     {
+        "name": "Openstelling Informatieplein",
+        "logo": {
+            "filename": "logo_bibliotheekveendam.png",
+            "alt": "Informatieplein"
+                },
+        "description": " ",
+        "calendar": [
+            {
+                "day": "monday",
+                "start": "14:00",
+                "end": "16:00",
+                "frequency": "weekly"
+                 ],
+        "calendar_summary": "Tijdens de kerstvakantie van eind december 2025 is het informatieplein gesloten van 20 december tot en met 2 januari."
+    },
+    {
         "name": "Hulp bij formulieren",
         "logo": {
             "filename": "logo_humanitas.png",
