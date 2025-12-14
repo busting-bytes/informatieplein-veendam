@@ -44,9 +44,15 @@ const participants = [
                 "start": "10:00",
                 "end": "12:00",
                 "frequency": "weekly"
+            },
+            {
+                "day": "thursday",
+                "start": "17:30",
+                "end": "19:30",
+                "frequency": "odd_weeks"
             }
         ],
-        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur en iedere woensdag van 10:00 tot 12:00 uur."
+        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur, iedere woensdag van 10:00 tot 12:00 uur en vanaf 2026 de oneven weken op donderdag van 17:30 tot 19:30 uur."
     },
      {
         "name": "Hulp digitale zaken",
@@ -107,10 +113,31 @@ const participants = [
                 "start": "10:00",
                 "end": "12:00",
                 "frequency": "weekly"
+            },
+            {
+                "day": "thursday",
+                "start": "17:30",
+                "end": "19:30",
+                "frequency": "odd_weeks"
+            },
+            {
+                "day": "29-01-2026",
+                "frequency": "except"
+            },
+            {
+                "day": "26-02-2026",
+                "frequency": "except"
+            },
+            {
+                "day": "26-03-2026",
+                "frequency": "except"
+            },
+            {
+                "day": "23-04-2026",
+                "frequency": "except"
             }
-
         ],
-        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur en iedere woensdag van 10:00 tot 12:00 uur."
+        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur, iedere woensdag van 10:00 tot 12:00 uur en vanaf 2026 de oneven weken op donderdag van 17:30 tot 19:30 uur."
     },
     {
         "name": "Geheugenproblematiek",
@@ -159,13 +186,9 @@ const participants = [
                 "start": "10:00",
                 "end": "12:00",
                 "frequency": "odd_weeks"
-            // },
-            // {
-            //     "day": "10-09-2025",
-            //     "frequency": "except"
             }
         ],
-        "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur."
+        "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur, behalve tijdens schoolvakanties."
     },
     {
         "name": "Vroegsignalering: Zorgen over geld? Wij luisteren en helpen graag!",
@@ -176,17 +199,15 @@ const participants = [
         "description": "Heeft u moeite met het betalen van rekeningen of maakt u zich zorgen over uw geldzaken? Kom dan gratis en zonder afspraak langs bij het spreekuur van Vroegsignalering. Wij luisteren, denken mee en helpen u bij het vinden van een oplossing die bij u past.",
         "calendar": [
             {
-                "day": "14-01-2026",
+                "day": "wednesday",
                 "start": "10:00",
                 "end": "12:00",
-                "frequency": "once"
-           }
-            // {
-            //     "day": "wednesday",
-            //     "start": "10:00",
-            //     "end": "12:00",
-            //     "frequency": "odd_weeks"
-            // }
+                "frequency": "odd_weeks"
+            },
+            {
+                "day": "17-12-2025",
+                "frequency": "except"
+            }
         ],
         "calendar_summary": "Vanaf 14 januari 2026 de oneven weken op woensdag van 10:00 tot 12:00 uur."
     },
@@ -233,13 +254,29 @@ const participants = [
         "description": "Schuldhulpmaatje pakt samen met jou je geldproblemen aan. Gratis en zonder oordeel.",
         "calendar": [
             {
-                "day": "monday",
-                "start": "14:00",
-                "end": "16:00",
-                "frequency": "first_of_month"
+                "day": "thursday",
+                "start": "17:30",
+                "end": "19:00",
+                "frequency": "odd_weeks"
+            },
+            {
+                "day": "29-01-2026",
+                "frequency": "except"
+            },
+            {
+                "day": "26-02-2026",
+                "frequency": "except"
+            },
+            {
+                "day": "26-03-2026",
+                "frequency": "except"
+            },
+            {
+                "day": "23-04-2026",
+                "frequency": "except"
             }
         ],
-        "calendar_summary": "Eerste maandag van de maand van 14:00 tot 16:00 uur."
+        "calendar_summary": "Vanaf 15 januari 2026 iedere tweede donderdag van de maand van 17:30 tot 19:00 uur."
     },
     {
         "name": "FNV loopbaancoaching",
@@ -256,7 +293,7 @@ const participants = [
                 "frequency": "odd_weeks"
             }
         ],
-        "calendar_summary": "Oneven weken t/m 17 juli op donderdag van 17:30 tot 19:30 uur ."
+        "calendar_summary": "Oneven weken op donderdag van 17:30 tot 19:30 uur ."
     },
     {
         "name": "VKB: Hulp bij geldzaken",
@@ -271,10 +308,10 @@ const participants = [
                 "start": "13:00",
                 "end": "15:00",
                 "frequency": "weekly"
-            },
-            {
-                "day": "27-10-2025",
-                "frequency": "except"
+            // },
+            // {
+            //     "day": "27-10-2025",
+            //     "frequency": "except"
             }
         ],
         "calendar_summary": "Iedere maandag van 13:00 tot 15:00 uur."
@@ -350,7 +387,7 @@ const participants = [
         "calendar_summary": "Iedere eerste en derde maandag van de maand van 14:00 tot 16:00 uur en tweede en vierde woensdag van de maand van 10:00 tot 12:00 uur."
     },
     // {
-    //     "name": "Jongerenwerk deBasis",
+    //     "name": "Jongerenwerk deBasis",        VOORLOPIG NIET
     //     "logo": {
     //         "filename": "logo_debasis.png",
     //         "alt": "deBasis Veendam"
@@ -366,35 +403,35 @@ const participants = [
     //     ],
     //     "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur van september t/m juni."
     // },
-    {
-        "name": "ImpulsLoket Nationaal Programma Groningen",
-        "logo": {
-            "filename": "Logo_Impulsloket.png",
-            "alt": "Nationaal programma Groningen"
-        },
-        "description": "Subsidie voor stichting, vereniging, coöperatie zonder winstoogmerk. Heb je een plan dat de leefbaarheid in jouw omgeving verbetert?",
-        "calendar": [
-            {
-                "day": "08-10-2025",
-                "start": "10:00",
-                "end": "12:00",
-                "frequency": "once"
-           },
-            {
-                "day": "05-11-2025",
-                "start": "10:00",
-                "end": "12:00",
-                "frequency": "once"
-           },
-            {
-                "day": "03-12-2025",
-                "start": "10:00",
-                "end": "12:00",
-                "frequency": "once"
-           }
-        ],
-        "calendar_summary": "Op 5 november en 3 december van 10:00 tot 12:00 uur."
-    },
+    // {
+    //     "name": "ImpulsLoket Nationaal Programma Groningen",        GESTOPT
+    //     "logo": {
+    //         "filename": "Logo_Impulsloket.png",
+    //         "alt": "Nationaal programma Groningen"
+    //     },
+    //     "description": "Subsidie voor stichting, vereniging, coöperatie zonder winstoogmerk. Heb je een plan dat de leefbaarheid in jouw omgeving verbetert?",
+    //     "calendar": [
+    //         {
+    //             "day": "08-10-2025",
+    //             "start": "10:00",
+    //             "end": "12:00",
+    //             "frequency": "once"
+    //        },
+    //         {
+    //             "day": "05-11-2025",
+    //             "start": "10:00",
+    //             "end": "12:00",
+    //             "frequency": "once"
+    //        },
+    //         {
+    //             "day": "03-12-2025",
+    //             "start": "10:00",
+    //             "end": "12:00",
+    //             "frequency": "once"
+    //        }
+    //     ],
+    //     "calendar_summary": "Op 5 november en 3 december van 10:00 tot 12:00 uur."
+    // },
     {
         "name": "Veendam Beweegt",
         "logo": {
@@ -404,48 +441,30 @@ const participants = [
         "description": "Veendam Beweegt stimuleert een actieve en gezonde levensstijl voor alle inwoners van Veendam. Wij bieden diverse beweegactiviteiten, ondersteunen verenigingen en sportaccommodaties en organiseren evenementen.",
         "calendar": [
             {
-                "day": "05-11-2025",
+                "day": "wednesday",
                 "start": "10:00",
                 "end": "12:00",
-                "frequency": "once"
-           },
-            {
-                "day": "19-11-2025",
-                "start": "10:00",
-                "end": "12:00",
-                "frequency": "once"
-           },
-            {
-                "day": "03-12-2025",
-                "start": "10:00",
-                "end": "12:00",
-                "frequency": "once"
-           },
-            {
-                "day": "17-12-2025",
-                "start": "10:00",
-                "end": "12:00",
-                "frequency": "once"
+                "frequency": "odd_weeks"
            }
         ],
-        "calendar_summary": "Op 5 en 19 november en op 3 en 14 december van 10:00 tot 12:00 uur."
+        "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur."
     },
     {
-        "name": "Workshop Navigatie",
+        "name": "Workshop Tikkies betalen en maken",
         "logo": {
             "filename": "logo_bibliotheekveendam.png",
             "alt": "Bibliotheek Veendam"
         },
-        "description": "Workshop over routeplanners en routes plannen. Als voorbeeld navigeren met Google Maps.",
+        "description": "Wat is een Tikkie? Hoe betaal je die? Hoe kun je met een QR code betalen zoals bij een collecte? Hoe kun je zelf een Tikkie maken? Je leert er in deze workshop alles over.",
         "calendar": [
             {
-                "day": "30-10-2025",
+                "day": "22-01-2026",
                 "start": "14:00",
                 "end": "16:00",
                 "frequency": "once"
            }
         ],
-        "calendar_summary": "Op donderdag 30 oktober van 14:00 tot 16:00 uur."
+        "calendar_summary": "Op donderdag 22 januari van 14:00 tot 16:00 uur."
     }
 ];
 const highlightableParticipants = participants.filter(
