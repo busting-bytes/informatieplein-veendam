@@ -21,9 +21,15 @@ const participants = [
                 "start": "14:00",
                 "end": "16:00",
                 "frequency": "weekly"
+            },
+            {
+                "day": "wednesday",
+                "start": "10:00",
+                "end": "12:00",
+                "frequency": "weekly"
          }
              ],
-        "calendar_summary": "Tijdens de kerstvakantie van eind december 2025 is het informatieplein gesloten van 20 december tot en met 2 januari."
+        "calendar_summary": "Gedurende de zomer kunnen soms spreekuren uitvallen in verband met vakanties."
     },
     {
         "name": "Hulp bij formulieren",
@@ -44,15 +50,9 @@ const participants = [
                 "start": "10:00",
                 "end": "12:00",
                 "frequency": "weekly"
-            },
-            {
-                "day": "thursday",
-                "start": "17:30",
-                "end": "19:30",
-                "frequency": "odd_weeks"
             }
         ],
-        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur, iedere woensdag van 10:00 tot 12:00 uur en vanaf 2026 de oneven weken op donderdag van 17:30 tot 19:30 uur."
+        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur en iedere woensdag van 10:00 tot 12:00 uur."
     },
      {
         "name": "Hulp digitale zaken",
@@ -113,31 +113,13 @@ const participants = [
                 "start": "10:00",
                 "end": "12:00",
                 "frequency": "weekly"
-            },
-            {
-                "day": "thursday",
-                "start": "17:30",
-                "end": "19:30",
-                "frequency": "odd_weeks"
-            },
-            {
-                "day": "29-01-2026",
-                "frequency": "except"
-            },
-            {
-                "day": "26-02-2026",
-                "frequency": "except"
-            },
-            {
-                "day": "26-03-2026",
-                "frequency": "except"
-            },
-            {
-                "day": "23-04-2026",
-                "frequency": "except"
+            // },
+            // {
+            //     "day": "23-04-2026",
+            //     "frequency": "except"
             }
         ],
-        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur, iedere woensdag van 10:00 tot 12:00 uur en vanaf 2026 de oneven weken op donderdag van 17:30 tot 19:30 uur."
+        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur, iedere woensdag van 10:00 tot 12:00 uur."
     },
     {
         "name": "Geheugenproblematiek",
@@ -156,23 +138,23 @@ const participants = [
         ],
         "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur."
     },
-    {
-        "name": "Loket Leefbaarheid",
-        "logo": {
-            "filename": "logo_loketleefbaarheid.png",
-            "alt": "Groninger Dorpen, Loko Loket, Loket Leefbaarheid"
-        },
-        "description": "Tijdens het spreekuur kun je terecht voor aanvragen om de gemeente Veendam leefbaarder te maken. Ook wordt er informatie gegeven over het algehele proces en het uitvoeren van een project.",
-        "calendar": [
-            {
-                "day": "wednesday",
-                "start": "10:00",
-                "end": "12:00",
-                "frequency": "odd_weeks"
-            }
-        ],
-        "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur."
-    },
+    // {
+    //     "name": "Loket Leefbaarheid",
+    //     "logo": {
+    //         "filename": "logo_loketleefbaarheid.png",
+    //         "alt": "Groninger Dorpen, Loko Loket, Loket Leefbaarheid"
+    //     },
+    //     "description": "Tijdens het spreekuur kun je terecht voor aanvragen om de gemeente Veendam leefbaarder te maken. Ook wordt er informatie gegeven over het algehele proces en het uitvoeren van een project.",
+    //     "calendar": [
+    //         {
+    //             "day": "wednesday",
+    //             "start": "10:00",
+    //             "end": "12:00",
+    //             "frequency": "odd_weeks"
+    //         }
+    //     ],
+    //     "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur."
+    // },
     {
         "name": "Buurtgezinnen",
         "logo": {
@@ -203,13 +185,26 @@ const participants = [
                 "start": "10:00",
                 "end": "12:00",
                 "frequency": "odd_weeks"
-            },
-            {
-                "day": "17-12-2025",
-                "frequency": "except"
             }
         ],
-        "calendar_summary": "Vanaf 14 januari 2026 de oneven weken op woensdag van 10:00 tot 12:00 uur."
+        "calendar_summary": "De oneven weken op woensdag van 10:00 tot 12:00 uur."
+    },
+    {
+        "name": "Inloopspreekuur inkomensconsulenten Gemeente Veendam.",
+        "logo": {
+            "filename": "logo_gemeenteveendam.png",
+            "alt": "Inkomensconsulenten"
+        },
+        "description": "Voor alle inwoners van Veendam met vragen over onder andere: uitkering, bijzondere bijstand, inkomenstoeslag. Loop gerust binnen, we denken graag met je mee!",
+        "calendar": [
+            {
+                "day": "wednesday",
+                "start": "10:00",
+                "end": "12:00",
+                "frequency": "weekly"
+            }
+        ],
+        "calendar_summary": "Iedere woensdag van 10:00 tot 12:00 uur."
     },
     {
         "name": "Taalhuis spreekuur",
@@ -245,56 +240,40 @@ const participants = [
         ],
         "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur."
     },
-    {
-        "name": "Schuldhulpmaatje",
-        "logo": {
-            "filename": "logo_schuldhm.png",
-            "alt": "SchuldHulpMaatje"
-        },
-        "description": "Schuldhulpmaatje pakt samen met jou je geldproblemen aan. Gratis en zonder oordeel.",
-        "calendar": [
-            {
-                "day": "thursday",
-                "start": "17:30",
-                "end": "19:00",
-                "frequency": "odd_weeks"
-            },
-            {
-                "day": "29-01-2026",
-                "frequency": "except"
-            },
-            {
-                "day": "26-02-2026",
-                "frequency": "except"
-            },
-            {
-                "day": "26-03-2026",
-                "frequency": "except"
-            },
-            {
-                "day": "23-04-2026",
-                "frequency": "except"
-            }
-        ],
-        "calendar_summary": "Vanaf 15 januari 2026 iedere tweede donderdag van de maand van 17:30 tot 19:00 uur."
-    },
-    {
-        "name": "FNV loopbaancoaching",
-        "logo": {
-            "filename": "logo_fnv.png",
-            "alt": "FNV"
-        },
-        "description": "Heb je een vraag over je loopbaan of wil je met een coach praten over je werk? Kom naar de loopbaanadviseurs in de bibliotheek.",
-        "calendar": [
-            {
-                "day": "thursday",
-                "start": "17:30",
-                "end": "19:30",
-                "frequency": "odd_weeks"
-            }
-        ],
-        "calendar_summary": "Oneven weken op donderdag van 17:30 tot 19:30 uur ."
-    },
+    // {
+    //     "name": "Schuldhulpmaatje",
+    //     "logo": {
+    //         "filename": "logo_schuldhm.png",
+    //         "alt": "SchuldHulpMaatje"
+    //     },
+    //     "description": "Schuldhulpmaatje pakt samen met jou je geldproblemen aan. Gratis en zonder oordeel.",
+    //     "calendar": [
+    //         {
+    //             "day": "thursday",
+    //             "start": "17:30",
+    //             "end": "19:00",
+    //             "frequency": "odd_weeks"
+    //         }
+    //     ],
+    //     "calendar_summary": "Vanaf 15 januari 2026 iedere tweede donderdag van de maand van 17:30 tot 19:00 uur."
+    // },
+    // {
+    //     "name": "FNV loopbaancoaching",
+    //     "logo": {
+    //         "filename": "logo_fnv.png",
+    //         "alt": "FNV"
+    //     },
+    //     "description": "Heb je een vraag over je loopbaan of wil je met een coach praten over je werk? Kom naar de loopbaanadviseurs in de bibliotheek.",
+    //     "calendar": [
+    //         {
+    //             "day": "thursday",
+    //             "start": "17:30",
+    //             "end": "19:30",
+    //             "frequency": "odd_weeks"
+    //         }
+    //     ],
+    //     "calendar_summary": "Oneven weken op donderdag van 17:30 tot 19:30 uur ."
+    // },
     {
         "name": "VKB: Hulp bij geldzaken",
         "logo": {
@@ -308,10 +287,6 @@ const participants = [
                 "start": "13:00",
                 "end": "15:00",
                 "frequency": "weekly"
-            // },
-            // {
-            //     "day": "27-10-2025",
-            //     "frequency": "except"
             }
         ],
         "calendar_summary": "Iedere maandag van 13:00 tot 15:00 uur."
@@ -328,64 +303,28 @@ const participants = [
                 "day": "monday",
                 "start": "14:00",
                 "end": "16:00",
-                "frequency": "first_of_month"
-            },
-           {
-                "day": "wednesday",
-                "start": "10:00",
-                "end": "12:00",
-                "frequency": "second_of_month"
-            },
-            {
-                "day": "monday",
-                "start": "14:00",
-                "end": "16:00",
-                "frequency": "third_of_month"
-            },
-            {
-                "day": "wednesday",
-                "start": "10:00",
-                "end": "12:00",
-                "frequency": "fourth_of_month"
+                "frequency": "weekly"
             }
         ],
-        "calendar_summary": "Iedere eerste en derde maandag van de maand van 14:00 tot 16:00 uur en tweede en vierde woensdag van de maand van 10:00 tot 12:00 uur."
+        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur."
     },
-    {
-        "name": "Stichting Leergeld",
-        "logo": {
-            "filename": "logo_stleergeld.png",
-            "alt": "Stichting Leergeld"
-        },
-        "description": "Stichting Leergeld biedt waar nodig financiële hulp aan gezinnen. Er kunnen aanvragen worden gedaan voor binnen- of buitenschoolse activiteiten.",
-        "calendar": [
-            {
-                "day": "monday",
-                "start": "14:00",
-                "end": "16:00",
-                "frequency": "first_of_month"
-            },
-          {
-                "day": "wednesday",
-                "start": "10:00",
-                "end": "12:00",
-                "frequency": "second_of_month"
-            },
-            {
-                "day": "monday",
-                "start": "14:00",
-                "end": "16:00",
-                "frequency": "third_of_month"
-            },
-             {
-                "day": "wednesday",
-                "start": "10:00",
-                "end": "12:00",
-                "frequency": "fourth_of_month"
-            }
-        ],
-        "calendar_summary": "Iedere eerste en derde maandag van de maand van 14:00 tot 16:00 uur en tweede en vierde woensdag van de maand van 10:00 tot 12:00 uur."
-    },
+    // {
+    //     "name": "Stichting Leergeld",
+    //     "logo": {
+    //         "filename": "logo_stleergeld.png",
+    //         "alt": "Stichting Leergeld"
+    //     },
+    //     "description": "Stichting Leergeld biedt waar nodig financiële hulp aan gezinnen. Er kunnen aanvragen worden gedaan voor binnen- of buitenschoolse activiteiten.",
+    //     "calendar": [
+    //         {
+    //             "day": "monday",
+    //             "start": "14:00",
+    //             "end": "16:00",
+    //             "frequency": "first_of_month"
+    //         }
+    //     ],
+    //     "calendar_summary": "Iedere eerste en derde maandag van de maand van 14:00 tot 16:00 uur en tweede en vierde woensdag van de maand van 10:00 tot 12:00 uur."
+    // },
     // {
     //     "name": "Jongerenwerk deBasis",        VOORLOPIG NIET
     //     "logo": {
@@ -416,39 +355,27 @@ const participants = [
     //             "start": "10:00",
     //             "end": "12:00",
     //             "frequency": "once"
-    //        },
-    //         {
-    //             "day": "05-11-2025",
-    //             "start": "10:00",
-    //             "end": "12:00",
-    //             "frequency": "once"
-    //        },
-    //         {
-    //             "day": "03-12-2025",
-    //             "start": "10:00",
-    //             "end": "12:00",
-    //             "frequency": "once"
     //        }
     //     ],
     //     "calendar_summary": "Op 5 november en 3 december van 10:00 tot 12:00 uur."
     // },
-    {
-        "name": "Veendam Beweegt",
-        "logo": {
-            "filename": "logo_veendambeweegt.png",
-            "alt": "Veendam Beweegt"
-        },
-        "description": "Veendam Beweegt stimuleert een actieve en gezonde levensstijl voor alle inwoners van Veendam. Wij bieden diverse beweegactiviteiten, ondersteunen verenigingen en sportaccommodaties en organiseren evenementen.",
-        "calendar": [
-            {
-                "day": "wednesday",
-                "start": "10:00",
-                "end": "12:00",
-                "frequency": "odd_weeks"
-           }
-        ],
-        "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur."
-    },
+    // {
+    //     "name": "Veendam Beweegt",
+    //     "logo": {
+    //         "filename": "logo_veendambeweegt.png",
+    //         "alt": "Veendam Beweegt"
+    //     },
+    //     "description": "Veendam Beweegt stimuleert een actieve en gezonde levensstijl voor alle inwoners van Veendam. Wij bieden diverse beweegactiviteiten, ondersteunen verenigingen en sportaccommodaties en organiseren evenementen.",
+    //     "calendar": [
+    //         {
+    //             "day": "wednesday",
+    //             "start": "10:00",
+    //             "end": "12:00",
+    //             "frequency": "odd_weeks"
+    //        }
+    //     ],
+    //     "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur."
+    // },
     {
         "name": "Workshop Tikkies betalen en maken",
         "logo": {
