@@ -122,12 +122,12 @@ const participants = [
         "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur, iedere woensdag van 10:00 tot 12:00 uur."
     },
     {
-        "name": "Geheugenproblematiek",
+        "name": "Hulp bij zorg rond dementie",
         "logo": {
             "filename": "logo_loketgeheugen4.png",
             "alt": "Buurtzorg, Zorggroep Meander, De Basis"
         },
-        "description": "Dit is een gezamenlijk spreekuur van deBasis, Meander, Buurtzorg en TSN.",
+        "description": "Tijdens het spreekuur kunt u terecht met al uw vragen, rondom dementie. Graag geven wij informatie en adviezen over onder andere alle vormen van beschikbare zorg, mantelzorg, zorgwetten (WMO, ZVW en WLZ).",
         "calendar": [
             {
                 "day": "monday",
@@ -136,7 +136,7 @@ const participants = [
                 "frequency": "weekly"
             }
         ],
-        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur."
+        "calendar_summary": "Dit is een gezamenlijk spreekuur van de Basis, Meander, Buurtzorg en TSN. Iedere maandag van 14:00 tot 16:00 uur."
     },
     // {
     //     "name": "Loket Leefbaarheid",
