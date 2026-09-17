@@ -18,18 +18,12 @@ const participants = [
         "calendar": [
             {
                 "day": "monday",
-                "start": "14:00",
+                "start": "13:00",
                 "end": "16:00",
-                "frequency": "weekly"
-            },
-            {
-                "day": "wednesday",
-                "start": "10:00",
-                "end": "12:00",
                 "frequency": "weekly"
          }
              ],
-        "calendar_summary": "Gedurende de zomer kunnen soms spreekuren uitvallen in verband met vakanties."
+        "calendar_summary": "Tijdens de kerstvakantie van eind december 2026 is het informatieplein gesloten van 21 december tot en met 3 januari."
     },
     {
         "name": "Hulp bij formulieren",
@@ -50,9 +44,15 @@ const participants = [
                 "start": "10:00",
                 "end": "12:00",
                 "frequency": "weekly"
+            },
+            {
+                "day": "thursday",
+                "start": "17:30",
+                "end": "19:30",
+                "frequency": "odd_weeks"
             }
         ],
-        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur en iedere woensdag van 10:00 tot 12:00 uur."
+        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur, iedere woensdag van 10:00 tot 12:00 uur en vanaf 2026 de oneven weken op donderdag van 17:30 tot 19:30 uur."
     },
      {
         "name": "Hulp digitale zaken",
@@ -62,12 +62,12 @@ const participants = [
         },
         "description": "Vragen over je computer, e-reader, smartphone of tablet? Kom naar het digitaal spreekuur.",
         "calendar": [
-            {
-                "day": "monday",
-                "start": "14:00",
-                "end": "16:00",
-                "frequency": "weekly"
-            },
+            // {
+            //     "day": "monday",
+            //     "start": "14:00",
+            //     "end": "16:00",
+            //     "frequency": "weekly"
+            // },
             {
                 "day": "wednesday",
                 "start": "10:00",
@@ -75,7 +75,7 @@ const participants = [
                 "frequency": "weekly"
             }
         ],
-        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur en iedere woensdag van 10:00 tot 12:00 uur."
+        "calendar_summary": "Iedere woensdag van 10:00 tot 12:00 uur."
     },
    {
         "name": "Web in de wijk",
@@ -113,21 +113,16 @@ const participants = [
                 "start": "10:00",
                 "end": "12:00",
                 "frequency": "weekly"
-            // },
-            // {
-            //     "day": "23-04-2026",
-            //     "frequency": "except"
             }
         ],
-        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur, iedere woensdag van 10:00 tot 12:00 uur."
-    },
+        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur, iedere woensdag van 10:00 tot 12:00 uur
     {
-        "name": "Hulp bij zorg rond dementie",
+        "name": "Geheugenproblematiek",
         "logo": {
             "filename": "logo_loketgeheugen4.png",
             "alt": "Buurtzorg, Zorggroep Meander, De Basis"
         },
-        "description": "Tijdens het spreekuur kunt u terecht met al uw vragen, rondom dementie. Graag geven wij informatie en adviezen over onder andere alle vormen van beschikbare zorg, mantelzorg, zorgwetten (WMO, ZVW en WLZ).",
+        "description": "Dit is een gezamenlijk spreekuur van deBasis, Meander, Buurtzorg en TSN.",
         "calendar": [
             {
                 "day": "monday",
@@ -136,25 +131,25 @@ const participants = [
                 "frequency": "weekly"
             }
         ],
-        "calendar_summary": "Dit is een gezamenlijk spreekuur van de Basis, Meander, Buurtzorg en TSN. Iedere maandag van 14:00 tot 16:00 uur."
+        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur."
     },
-    // {
-    //     "name": "Loket Leefbaarheid",
-    //     "logo": {
-    //         "filename": "logo_loketleefbaarheid.png",
-    //         "alt": "Groninger Dorpen, Loko Loket, Loket Leefbaarheid"
-    //     },
-    //     "description": "Tijdens het spreekuur kun je terecht voor aanvragen om de gemeente Veendam leefbaarder te maken. Ook wordt er informatie gegeven over het algehele proces en het uitvoeren van een project.",
-    //     "calendar": [
-    //         {
-    //             "day": "wednesday",
-    //             "start": "10:00",
-    //             "end": "12:00",
-    //             "frequency": "odd_weeks"
-    //         }
-    //     ],
-    //     "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur."
-    // },
+    {
+        "name": "Loket Leefbaarheid",
+        "logo": {
+            "filename": "logo_loketleefbaarheid.png",
+            "alt": "Groninger Dorpen, Loko Loket, Loket Leefbaarheid"
+        },
+        "description": "Tijdens het spreekuur kun je terecht voor aanvragen om de gemeente Veendam leefbaarder te maken. Ook wordt er informatie gegeven over het algehele proces en het uitvoeren van een project.",
+        "calendar": [
+            {
+                "day": "wednesday",
+                "start": "10:00",
+                "end": "12:00",
+                "frequency": "odd_weeks"
+            }
+        ],
+        "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur."
+    },
     {
         "name": "Buurtgezinnen",
         "logo": {
@@ -187,24 +182,7 @@ const participants = [
                 "frequency": "odd_weeks"
             }
         ],
-        "calendar_summary": "De oneven weken op woensdag van 10:00 tot 12:00 uur."
-    },
-    {
-        "name": "Inloopspreekuur inkomensconsulenten Gemeente Veendam.",
-        "logo": {
-            "filename": "logo_gemeenteveendam.png",
-            "alt": "Inkomensconsulenten"
-        },
-        "description": "Voor alle inwoners van Veendam met vragen over onder andere: uitkering, bijzondere bijstand, inkomenstoeslag. Loop gerust binnen, we denken graag met je mee!",
-        "calendar": [
-            {
-                "day": "wednesday",
-                "start": "10:00",
-                "end": "12:00",
-                "frequency": "weekly"
-            }
-        ],
-        "calendar_summary": "Iedere woensdag van 10:00 tot 12:00 uur."
+        "calendar_summary": "Vanaf 14 januari 2026 de oneven weken op woensdag van 10:00 tot 12:00 uur."
     },
     {
         "name": "Taalhuis spreekuur",
@@ -253,6 +231,22 @@ const participants = [
     //             "start": "17:30",
     //             "end": "19:00",
     //             "frequency": "odd_weeks"
+    //         },
+    //         {
+    //             "day": "29-01-2026",
+    //             "frequency": "except"
+    //         },
+    //         {
+    //             "day": "26-02-2026",
+    //             "frequency": "except"
+    //         },
+    //         {
+    //             "day": "26-03-2026",
+    //             "frequency": "except"
+    //         },
+    //         {
+    //             "day": "23-04-2026",
+    //             "frequency": "except"
     //         }
     //     ],
     //     "calendar_summary": "Vanaf 15 januari 2026 iedere tweede donderdag van de maand van 17:30 tot 19:00 uur."
@@ -287,6 +281,10 @@ const participants = [
                 "start": "13:00",
                 "end": "15:00",
                 "frequency": "weekly"
+            // },
+            // {
+            //     "day": "27-10-2025",
+            //     "frequency": "except"
             }
         ],
         "calendar_summary": "Iedere maandag van 13:00 tot 15:00 uur."
@@ -303,28 +301,64 @@ const participants = [
                 "day": "monday",
                 "start": "14:00",
                 "end": "16:00",
-                "frequency": "weekly"
+                "frequency": "first_of_month"
+            },
+           {
+                "day": "wednesday",
+                "start": "10:00",
+                "end": "12:00",
+                "frequency": "second_of_month"
+            },
+            {
+                "day": "monday",
+                "start": "14:00",
+                "end": "16:00",
+                "frequency": "third_of_month"
+            },
+            {
+                "day": "wednesday",
+                "start": "10:00",
+                "end": "12:00",
+                "frequency": "fourth_of_month"
             }
         ],
-        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur."
+        "calendar_summary": "Iedere eerste en derde maandag van de maand van 14:00 tot 16:00 uur en tweede en vierde woensdag van de maand van 10:00 tot 12:00 uur."
     },
-    // {
-    //     "name": "Stichting Leergeld",
-    //     "logo": {
-    //         "filename": "logo_stleergeld.png",
-    //         "alt": "Stichting Leergeld"
-    //     },
-    //     "description": "Stichting Leergeld biedt waar nodig financiële hulp aan gezinnen. Er kunnen aanvragen worden gedaan voor binnen- of buitenschoolse activiteiten.",
-    //     "calendar": [
-    //         {
-    //             "day": "monday",
-    //             "start": "14:00",
-    //             "end": "16:00",
-    //             "frequency": "first_of_month"
-    //         }
-    //     ],
-    //     "calendar_summary": "Iedere eerste en derde maandag van de maand van 14:00 tot 16:00 uur en tweede en vierde woensdag van de maand van 10:00 tot 12:00 uur."
-    // },
+    {
+        "name": "Stichting Leergeld",
+        "logo": {
+            "filename": "logo_stleergeld.png",
+            "alt": "Stichting Leergeld"
+        },
+        "description": "Stichting Leergeld biedt waar nodig financiële hulp aan gezinnen. Er kunnen aanvragen worden gedaan voor binnen- of buitenschoolse activiteiten.",
+        "calendar": [
+            {
+                "day": "monday",
+                "start": "14:00",
+                "end": "16:00",
+                "frequency": "first_of_month"
+            },
+          {
+                "day": "wednesday",
+                "start": "10:00",
+                "end": "12:00",
+                "frequency": "second_of_month"
+            },
+            {
+                "day": "monday",
+                "start": "14:00",
+                "end": "16:00",
+                "frequency": "third_of_month"
+            },
+             {
+                "day": "wednesday",
+                "start": "10:00",
+                "end": "12:00",
+                "frequency": "fourth_of_month"
+            }
+        ],
+        "calendar_summary": "Iedere eerste en derde maandag van de maand van 14:00 tot 16:00 uur en tweede en vierde woensdag van de maand van 10:00 tot 12:00 uur."
+    },
     // {
     //     "name": "Jongerenwerk deBasis",        VOORLOPIG NIET
     //     "logo": {
@@ -355,6 +389,18 @@ const participants = [
     //             "start": "10:00",
     //             "end": "12:00",
     //             "frequency": "once"
+    //        },
+    //         {
+    //             "day": "05-11-2025",
+    //             "start": "10:00",
+    //             "end": "12:00",
+    //             "frequency": "once"
+    //        },
+    //         {
+    //             "day": "03-12-2025",
+    //             "start": "10:00",
+    //             "end": "12:00",
+    //             "frequency": "once"
     //        }
     //     ],
     //     "calendar_summary": "Op 5 november en 3 december van 10:00 tot 12:00 uur."
@@ -375,23 +421,23 @@ const participants = [
     //        }
     //     ],
     //     "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur."
-    // },
-    {
-        "name": "Workshop Tikkies betalen en maken",
-        "logo": {
-            "filename": "logo_bibliotheekveendam.png",
-            "alt": "Bibliotheek Veendam"
-        },
-        "description": "Wat is een Tikkie? Hoe betaal je die? Hoe kun je met een QR code betalen zoals bij een collecte? Hoe kun je zelf een Tikkie maken? Je leert er in deze workshop alles over.",
-        "calendar": [
-            {
-                "day": "22-01-2026",
-                "start": "14:00",
-                "end": "16:00",
-                "frequency": "once"
-           }
-        ],
-        "calendar_summary": "Op donderdag 22 januari van 14:00 tot 16:00 uur."
+    // // },
+    // {
+    //     "name": "Workshop Tikkies betalen en maken",
+    //     "logo": {
+    //         "filename": "logo_bibliotheekveendam.png",
+    //         "alt": "Bibliotheek Veendam"
+    //     },
+    //     "description": "Wat is een Tikkie? Hoe betaal je die? Hoe kun je met een QR code betalen zoals bij een collecte? Hoe kun je zelf een Tikkie maken? Je leert er in deze workshop alles over.",
+    //     "calendar": [
+    //         {
+    //             "day": "22-01-2026",
+    //             "start": "14:00",
+    //             "end": "16:00",
+    //             "frequency": "once"
+    //        }
+    //     ],
+    //     "calendar_summary": "Op donderdag 22 januari van 14:00 tot 16:00 uur."
     }
 ];
 const highlightableParticipants = participants.filter(
