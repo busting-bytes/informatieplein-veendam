@@ -21,8 +21,8 @@ const participants = [
                 "start": "13:00",
                 "end": "16:00",
                 "frequency": "weekly"
-         }
-             ],
+            }
+        ],
         "calendar_summary": "Tijdens de kerstvakantie van eind december 2026 is het informatieplein gesloten van 21 december tot en met 3 januari."
     },
     {
@@ -115,7 +115,8 @@ const participants = [
                 "frequency": "weekly"
             }
         ],
-        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur, iedere woensdag van 10:00 tot 12:00 uur
+        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur, iedere woensdag van 10:00 tot 12:00 uur."
+    },
     {
         "name": "Geheugenproblematiek",
         "logo": {
@@ -438,7 +439,7 @@ const participants = [
     //        }
     //     ],
     //     "calendar_summary": "Op donderdag 22 januari van 14:00 tot 16:00 uur."
-    }
+    // }
 ];
 const highlightableParticipants = participants.filter(
     participant => undefined !== participant.calendar.find(calendar => {
