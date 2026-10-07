@@ -44,15 +44,15 @@ const participants = [
                 "start": "10:00",
                 "end": "12:00",
                 "frequency": "weekly"
-            },
-            {
-                "day": "thursday",
-                "start": "17:30",
-                "end": "19:30",
-                "frequency": "odd_weeks"
+            // },
+            // {
+            //     "day": "thursday",
+            //     "start": "17:30",
+            //     "end": "19:30",
+            //     "frequency": "odd_weeks"
             }
         ],
-        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur, iedere woensdag van 10:00 tot 12:00 uur en vanaf 2026 de oneven weken op donderdag van 17:30 tot 19:30 uur."
+        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur en iedere woensdag van 10:00 tot 12:00 uur."
     },
      {
         "name": "Hulp digitale zaken",
@@ -115,7 +115,8 @@ const participants = [
                 "frequency": "weekly"
             }
         ],
-        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur, iedere woensdag van 10:00 tot 12:00 uur
+        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur, iedere woensdag van 10:00 tot 12:00 uur."
+        },
     {
         "name": "Geheugenproblematiek",
         "logo": {
@@ -151,6 +152,31 @@ const participants = [
         "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur."
     },
     {
+        "name": "Het Juridisch Loket",
+        "logo": {
+            "filename": "logo_juridischloket.png",
+            "alt": "Juridisch Loket"
+        },
+        "description": "Gratis juridisch advies voor mensen met een laag inkomen.",
+        "calendar": [
+            {
+                "day": "wednesday",
+                "start": "10:00",
+                "end": "12:00",
+                "frequency": "even_weeks"
+            },
+            {
+                "day": "14-10-2026",
+                "frequency": "except"
+            },
+            {
+                "day": "28-10-2026",
+                "frequency": "except"
+            }
+        ],
+        "calendar_summary": "Vanaf 11 november 2026 de oneven weken op woensdag van 10:00 tot 12:00 uur."
+    },
+    {
         "name": "Buurtgezinnen",
         "logo": {
             "filename": "logo_loketbuurtgezinnen.png",
@@ -168,7 +194,7 @@ const participants = [
         "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur, behalve tijdens schoolvakanties."
     },
     {
-        "name": "Vroegsignalering: Zorgen over geld? Wij luisteren en helpen graag!",
+        "name": "Vroegsignalering bij zorgen over geld",
         "logo": {
             "filename": "logo_gemeenteveendam.png",
             "alt": "Vroegsignalering"
@@ -214,9 +240,15 @@ const participants = [
                 "start": "14:00",
                 "end": "16:00",
                 "frequency": "weekly"
+            },
+           {
+                "day": "monday",
+                "start": "14:00",
+                "end": "16:00",
+                "frequency": "third_of_month"
             }
         ],
-        "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur."
+        "calendar_summary": "Iedere eerste en derde maandag van de maand van 14:00 tot 16:00 uur."
     },
     // {
     //     "name": "Schuldhulpmaatje",
@@ -280,14 +312,16 @@ const participants = [
                 "day": "monday",
                 "start": "13:00",
                 "end": "15:00",
-                "frequency": "weekly"
-            // },
-            // {
-            //     "day": "27-10-2025",
-            //     "frequency": "except"
+                "frequency": "even_weeks"
+            },
+            {
+                "day": "wednesday",
+                "start": "10:00",
+                "end": "12:00",
+                "frequency": "odd_weeks"
             }
         ],
-        "calendar_summary": "Iedere maandag van 13:00 tot 15:00 uur."
+        "calendar_summary": "De even weken op maandag van 13:00 tot 15:00 uur."
     },
     {
         "name": "Vrijwilligers informatiepunt",
@@ -438,7 +472,7 @@ const participants = [
     //        }
     //     ],
     //     "calendar_summary": "Op donderdag 22 januari van 14:00 tot 16:00 uur."
-    }
+    // }
 ];
 const highlightableParticipants = participants.filter(
     participant => undefined !== participant.calendar.find(calendar => {
