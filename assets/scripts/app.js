@@ -197,9 +197,10 @@ const participants = [
         "name": "Vroegsignalering bij zorgen over geld",
         "logo": {
             "filename": "logo_gemeenteveendam.png",
-            "alt": "Vroegsignalering"
+            "alt": "Vroegsignalering!"
+            // "alt": "Vroegsignalering"
         },
-        "description": "Heeft u moeite met het betalen van rekeningen of maakt u zich zorgen over uw geldzaken? Kom dan gratis en zonder afspraak langs bij het spreekuur van Vroegsignalering. Wij luisteren, denken mee en helpen u bij het vinden van een oplossing die bij u past.",
+        "description": "@@wijziging@@ Heeft u moeite met het betalen van rekeningen of maakt u zich zorgen over uw geldzaken? Kom dan gratis en zonder afspraak langs bij het spreekuur van Vroegsignalering. Wij luisteren, denken mee en helpen u bij het vinden van een oplossing die bij u past.",
         "calendar": [
             {
                 "day": "wednesday",
