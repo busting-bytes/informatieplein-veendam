@@ -21,6 +21,12 @@ const participants = [
                 "start": "13:00",
                 "end": "16:00",
                 "frequency": "weekly"
+         },
+            {
+                "day": "wednesday",
+                "start": "10:00",
+                "end": "12:00",
+                "frequency": "weekly"
          }
              ],
         "calendar_summary": "Tijdens de kerstvakantie van eind december 2026 is het informatieplein gesloten van 21 december tot en met 3 januari."
@@ -198,9 +204,8 @@ const participants = [
         "logo": {
             "filename": "logo_gemeenteveendam.png",
             "alt": "Vroegsignalering!"
-            // "alt": "Vroegsignalering"
         },
-        "description": "@@wijziging@@ Heeft u moeite met het betalen van rekeningen of maakt u zich zorgen over uw geldzaken? Kom dan gratis en zonder afspraak langs bij het spreekuur van Vroegsignalering. Wij luisteren, denken mee en helpen u bij het vinden van een oplossing die bij u past.",
+        "description": "Heeft u moeite met het betalen van rekeningen of maakt u zich zorgen over uw geldzaken? Kom dan gratis en zonder afspraak langs bij het spreekuur van Vroegsignalering. Wij luisteren, denken mee en helpen u bij het vinden van een oplossing die bij u past.",
         "calendar": [
             {
                 "day": "wednesday",
