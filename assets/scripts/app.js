@@ -141,21 +141,21 @@ const participants = [
         "calendar_summary": "Iedere maandag van 14:00 tot 16:00 uur."
     },
     {
-        "name": "Loket Leefbaarheid",
+        "name": "Inkomensconsulenten Gemeente Veendam",
         "logo": {
-            "filename": "logo_loketleefbaarheid.png",
-            "alt": "Groninger Dorpen, Loko Loket, Loket Leefbaarheid"
+            "filename": "logo_gemeenteveendam.png",
+            "alt": "loket inkomensconsulenten"
         },
-        "description": "Tijdens het spreekuur kun je terecht voor aanvragen om de gemeente Veendam leefbaarder te maken. Ook wordt er informatie gegeven over het algehele proces en het uitvoeren van een project.",
+        "description": "Inloopspreekuur Sociale Zaken Gemeente Veendam. Voor alle inwoners met vragen over onder andere: uitkering, bijzondere bijstand, inkomenstoeslag. Loop gerust binnen, we denken graag met je mee!",
         "calendar": [
             {
                 "day": "wednesday",
                 "start": "10:00",
                 "end": "12:00",
-                "frequency": "odd_weeks"
+                "frequency": "weekly"
             }
         ],
-        "calendar_summary": "Oneven weken op woensdag van 10:00 tot 12:00 uur."
+        "calendar_summary": "Iedere woensdag van 10:00 tot 12:00 uur."
     },
     {
         "name": "Het Juridisch Loket",
@@ -365,42 +365,42 @@ const participants = [
             }
         ],
         "calendar_summary": "Iedere eerste en derde maandag van de maand van 14:00 tot 16:00 uur en tweede en vierde woensdag van de maand van 10:00 tot 12:00 uur."
-    },
-    {
-        "name": "Stichting Leergeld",
-        "logo": {
-            "filename": "logo_stleergeld.png",
-            "alt": "Stichting Leergeld"
-        },
-        "description": "Stichting Leergeld biedt waar nodig financiële hulp aan gezinnen. Er kunnen aanvragen worden gedaan voor binnen- of buitenschoolse activiteiten.",
-        "calendar": [
-            {
-                "day": "monday",
-                "start": "14:00",
-                "end": "16:00",
-                "frequency": "first_of_month"
-            },
-          {
-                "day": "wednesday",
-                "start": "10:00",
-                "end": "12:00",
-                "frequency": "second_of_month"
-            },
-            {
-                "day": "monday",
-                "start": "14:00",
-                "end": "16:00",
-                "frequency": "third_of_month"
-            },
-             {
-                "day": "wednesday",
-                "start": "10:00",
-                "end": "12:00",
-                "frequency": "fourth_of_month"
-            }
-        ],
-        "calendar_summary": "Iedere eerste en derde maandag van de maand van 14:00 tot 16:00 uur en tweede en vierde woensdag van de maand van 10:00 tot 12:00 uur."
-    },
+    }
+    // {
+    //     "name": "Stichting Leergeld",
+    //     "logo": {
+    //         "filename": "logo_stleergeld.png",
+    //         "alt": "Stichting Leergeld"
+    //     },
+    //     "description": "Stichting Leergeld biedt waar nodig financiële hulp aan gezinnen. Er kunnen aanvragen worden gedaan voor binnen- of buitenschoolse activiteiten.",
+    //     "calendar": [
+    //         {
+    //             "day": "monday",
+    //             "start": "14:00",
+    //             "end": "16:00",
+    //             "frequency": "first_of_month"
+    //         },
+    //       {
+    //             "day": "wednesday",
+    //             "start": "10:00",
+    //             "end": "12:00",
+    //             "frequency": "second_of_month"
+    //         },
+    //         {
+    //             "day": "monday",
+    //             "start": "14:00",
+    //             "end": "16:00",
+    //             "frequency": "third_of_month"
+    //         },
+    //          {
+    //             "day": "wednesday",
+    //             "start": "10:00",
+    //             "end": "12:00",
+    //             "frequency": "fourth_of_month"
+    //         }
+    //     ],
+    //     "calendar_summary": "Iedere eerste en derde maandag van de maand van 14:00 tot 16:00 uur en tweede en vierde woensdag van de maand van 10:00 tot 12:00 uur."
+    // },
     // {
     //     "name": "Jongerenwerk deBasis",        VOORLOPIG NIET
     //     "logo": {
